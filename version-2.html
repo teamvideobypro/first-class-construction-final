@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>First Class Construction, Inc. | Luxury Remodeling in Northeast Ohio (Design Concept v2)</title>
+<meta name="description" content="Luxury kitchen, bathroom, home addition and whole home remodeling in Lake County and Northeast Ohio.">
+<!-- DESIGN CONCEPT v2 by Elite B Growth. All room/exterior imagery is AI-generated CONCEPT imagery, not First Class Construction projects. Replace with FCC's real project photos. -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#121210;--ink2:#1b1a17;--bone:#f3eee5;--paper:#faf7f1;--brass:#c19a5b;--brass2:#e0c48f;--mute:#8f887b;--line:rgba(243,238,229,.14);--lineD:rgba(18,18,16,.12);--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--bone);font-family:"Inter Tight",system-ui,sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.serif{font-family:Fraunces,Georgia,serif;font-weight:300;letter-spacing:-.02em;line-height:1.02}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass2);display:inline-flex;gap:12px;align-items:center}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.wrap{width:min(1320px,90vw);margin:0 auto}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:16px 26px;border-radius:999px;font-weight:500;font-size:.95rem;transition:transform .5s var(--ease),background .4s,color .4s;position:relative;overflow:hidden;isolation:isolate}
+.btn .ar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;transition:transform .5s var(--ease)}
+.btn:hover .ar{transform:rotate(-45deg)}
+.btn-brass{background:var(--brass);color:var(--ink)}.btn-brass .ar{background:var(--ink);color:var(--brass2)}
+.btn-brass:hover{background:var(--brass2)}
+.btn-ghost{border:1px solid var(--line);color:var(--bone)}.btn-ghost .ar{border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass2)}
+.need{display:inline-block;font-size:.7rem;letter-spacing:.06em;color:#ffcf8a;background:rgba(255,170,60,.12);border:1px dashed rgba(255,190,100,.5);padding:2px 8px;border-radius:4px}
+.cap{font-size:.72rem;color:var(--mute);letter-spacing:.04em}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:22px 0;transition:background .5s,padding .5s,transform .5s var(--ease)}
+nav.solid{background:rgba(18,18,16,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:14px 0;border-bottom:1px solid var(--line)}
+nav.hide{transform:translateY(-100%)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:12px}
+.mark{width:40px;height:40px;border:1px solid var(--brass);display:grid;place-items:center;font-family:Fraunces;color:var(--brass2);font-size:1rem;letter-spacing:.02em}
+.logo b{font-family:Fraunces;font-weight:400;font-size:1.08rem;letter-spacing:.01em;display:block;line-height:1.1}
+.logo small{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+.links{display:flex;gap:34px;font-size:.88rem;color:#d6cfc2}
+.links a{position:relative}.links a::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.links a:hover::after{transform:scaleX(1);transform-origin:left}
+.navr{display:flex;align-items:center;gap:18px}
+.phone{font-size:.9rem;color:#d6cfc2}.phone span{color:var(--brass2)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:none;color:var(--bone);font-size:1.1rem}
+.mmenu{position:fixed;inset:0;background:var(--ink);z-index:49;display:flex;flex-direction:column;justify-content:center;padding:0 8vw;gap:18px;clip-path:circle(0% at 92% 5%);transition:clip-path .8s var(--ease)}
+.mmenu.open{clip-path:circle(150% at 92% 5%)}
+.mmenu a{font-family:Fraunces;font-size:2.4rem;font-weight:300}
+
+/* HERO */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end}
+.hero .bg{position:absolute;inset:0;clip-path:inset(12% 18% 12% 18% round 6px);will-change:clip-path}
+.hero .bg img{width:100%;height:118%;object-fit:cover;transform:scale(1.15);will-change:transform}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,18,16,.55) 0%,rgba(18,18,16,.05) 35%,rgba(18,18,16,.2) 55%,rgba(18,18,16,.92) 100%),linear-gradient(90deg,rgba(18,18,16,.45),transparent 60%)}
+.hero .content{position:relative;z-index:2;width:min(1320px,90vw);margin:0 auto;padding-bottom:7vh;display:grid;grid-template-columns:1.6fr 1fr;gap:5vw;align-items:end}
+.hero h1{font-size:clamp(2.9rem,7.2vw,7.4rem)}
+.hero h1 em{font-style:italic;color:var(--brass2)}
+.line{display:block;overflow:hidden;padding-bottom:.06em}.line>span{display:inline-block;transform:translateY(110%)}
+.hero .side p{color:#d9d2c5;max-width:38ch;margin-bottom:28px;font-size:1.02rem}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .fade{opacity:0;transform:translateY(20px)}
+.hero .cap{position:absolute;right:4vw;top:110px;z-index:2;color:rgba(243,238,229,.6)}
+.scrollcue{position:absolute;left:50%;bottom:22px;z-index:2;width:1px;height:46px;background:var(--line);overflow:hidden}
+.scrollcue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--brass2);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+
+/* MARQUEE */
+.marq{border-block:1px solid var(--line);padding:26px 0;overflow:hidden;white-space:nowrap}
+.marq .track{display:inline-flex;gap:56px;animation:marq 38s linear infinite;font-family:Fraunces;font-size:clamp(1.4rem,2.6vw,2.4rem);font-weight:300;color:#cfc7b8}
+.marq .track i{font-style:normal;color:var(--brass)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* INTRO */
+section{position:relative}
+.intro{padding:18vh 0 14vh}
+.intro .big{font-size:clamp(1.9rem,4.2vw,4rem);max-width:22ch}
+.intro .big .w{opacity:.14;transition:opacity .2s}
+.intro .grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-top:10vh;align-items:start}
+.intro .grid p{color:#bdb5a6;max-width:52ch}
+.intro .facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.fact{padding:26px 0;border-bottom:1px solid var(--line)}
+.fact .n{font-family:Fraunces;font-size:clamp(2.4rem,4vw,3.6rem);color:var(--bone);font-weight:300}
+.fact .l{font-size:.78rem;color:var(--mute);letter-spacing:.06em}
+
+/* SERVICES horizontal */
+.svc{background:var(--paper);color:var(--ink)}
+.svc-head{padding:14vh 0 6vh;display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+.svc-head h2{font-size:clamp(2.6rem,6vw,5.6rem);max-width:12ch}
+.svc-head p{max-width:40ch;color:#5d574c}
+.svc .eyebrow{color:#8a6a38}
+.hwrap{overflow:hidden}
+.htrack{display:flex;gap:2.4vw;padding:0 5vw 14vh;width:max-content}
+.card{width:min(560px,40vw);flex:0 0 auto;position:relative}
+.card .ph{height:min(62vh,600px);overflow:hidden;border-radius:4px;position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.2s var(--ease)}
+.card:hover .ph img{transform:scale(1.02)}
+.card .num{position:absolute;top:18px;left:18px;font-size:.74rem;letter-spacing:.2em;color:var(--bone);background:rgba(18,18,16,.45);backdrop-filter:blur(6px);padding:6px 12px;border-radius:99px}
+.card h3{font-size:clamp(1.8rem,2.6vw,2.6rem);margin:22px 0 8px}
+.card p{color:#5d574c;max-width:44ch}
+.card .more{margin-top:16px;display:inline-flex;gap:10px;font-weight:500;font-size:.9rem;border-bottom:1px solid var(--ink);padding-bottom:3px}
+.card.cta-card{background:var(--ink);color:var(--bone);border-radius:4px;padding:48px;display:flex;flex-direction:column;justify-content:space-between;height:min(62vh,600px)}
+.card.cta-card h3{font-size:clamp(2rem,3vw,3rem);margin:0}
+.card.cta-card p{color:#bdb5a6}
+
+/* BEFORE AFTER */
+.ba{padding:16vh 0}
+.ba-head{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:end;margin-bottom:7vh}
+.ba-head h2{font-size:clamp(2.6rem,6vw,5.6rem)}
+.ba-head p{color:#bdb5a6;max-width:44ch}
+.tabsba{display:flex;gap:10px;margin-top:22px}
+.tabsba button{background:none;border:1px solid var(--line);color:#d6cfc2;padding:10px 20px;border-radius:99px;font:inherit;font-size:.86rem;cursor:pointer;transition:.4s}
+.tabsba button[aria-pressed=true]{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+.slider{position:relative;aspect-ratio:16/9;border-radius:6px;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize}
+.slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slider .after{clip-path:inset(0 0 0 50%)}
+.slider .handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--bone);transform:translateX(-1px)}
+.slider .knob{position:absolute;top:50%;left:50%;width:74px;height:74px;border-radius:50%;background:var(--bone);color:var(--ink);transform:translate(-50%,-50%);display:grid;place-items:center;font-size:.7rem;letter-spacing:.14em;font-weight:600;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.slider .tag{position:absolute;bottom:18px;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;background:rgba(18,18,16,.6);backdrop-filter:blur(6px);padding:8px 14px;border-radius:99px}
+.slider .tag.b{left:18px}.slider .tag.a{right:18px;color:var(--brass2)}
+
+/* SHOWCASE stack */
+.show{padding:4vh 0 16vh}
+.show-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:2vw}
+.tile{overflow:hidden;border-radius:4px;position:relative}
+.tile img{width:100%;height:100%;object-fit:cover}
+.t1{grid-column:1/8;aspect-ratio:4/3}.t2{grid-column:8/13;aspect-ratio:3/4;margin-top:14vh}
+.t3{grid-column:2/6;aspect-ratio:1;margin-top:-10vh}.t4{grid-column:7/13;aspect-ratio:16/10}
+.tile figcaption{position:absolute;left:16px;bottom:14px;font-size:.78rem;background:rgba(18,18,16,.55);backdrop-filter:blur(6px);padding:6px 12px;border-radius:99px}
+
+/* OWNER */
+.owner{background:var(--ink2);padding:16vh 0}
+.owner .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center}
+.ownph{aspect-ratio:4/5;border:1px dashed rgba(193,154,91,.5);border-radius:4px;display:grid;place-items:center;text-align:center;padding:30px;background:repeating-linear-gradient(135deg,rgba(193,154,91,.05) 0 12px,transparent 12px 24px)}
+.ownimg .oi{aspect-ratio:4/5;overflow:hidden;border-radius:4px;position:relative}.ownimg .oi::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(193,154,91,.35);border-radius:4px}.ownimg img{width:100%;height:100%;object-fit:cover}.ownimg figcaption{margin-top:12px}
+.owner h2{font-size:clamp(2.4rem,5vw,4.6rem);margin:18px 0 26px}
+.owner p{color:#bdb5a6;margin-bottom:16px;max-width:56ch}
+.owner .sig{font-family:Fraunces;font-style:italic;font-size:1.6rem;color:var(--brass2);margin-top:20px}
+
+/* PROCESS */
+.proc{padding:16vh 0;background:var(--paper);color:var(--ink)}
+.proc .eyebrow{color:#8a6a38}
+.proc h2{font-size:clamp(2.6rem,6vw,5.6rem);max-width:14ch;margin:16px 0 10vh}
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:4vw}
+.prog{position:absolute;top:0;left:0;right:0;height:1px;background:var(--lineD)}
+.prog i{position:absolute;inset:0;background:var(--ink);transform:scaleX(0);transform-origin:left}
+.step{padding-top:40px}
+.step .k{font-family:Fraunces;font-size:4.4rem;color:#c9bfae;line-height:1}
+.step h3{font-size:1.9rem;margin:18px 0 12px}
+.step p{color:#5d574c}
+
+/* REVIEWS */
+.rev{padding:16vh 0}
+.rev h2{font-size:clamp(2.4rem,5vw,4.6rem);max-width:16ch;margin:16px 0 8vh}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:2vw}
+.q{border:1px solid var(--line);border-radius:6px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:30px;transition:border-color .5s,transform .6s var(--ease)}
+.q:hover{border-color:var(--brass);transform:translateY(-6px)}
+.q blockquote{font-family:Fraunces;font-size:1.32rem;font-weight:300;line-height:1.35}
+.q cite{font-style:normal;font-size:.86rem;color:var(--brass2)}
+.q .src{font-size:.7rem;color:var(--mute)}
+
+/* ESTIMATOR / CTA */
+.cta{padding:16vh 0;background:radial-gradient(ellipse at 80% 0%,rgba(193,154,91,.18),transparent 55%),var(--ink2)}
+.cta .grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw}
+.cta h2{font-size:clamp(2.8rem,6.4vw,6rem)}
+.cta h2 em{font-style:italic;color:var(--brass2)}
+.cta .lead{color:#bdb5a6;margin:24px 0 34px;max-width:42ch}
+.est{background:var(--paper);color:var(--ink);border-radius:8px;padding:38px}
+.est .bar{height:3px;background:var(--lineD);border-radius:3px;margin-bottom:28px;overflow:hidden}.est .bar i{display:block;height:100%;width:33%;background:var(--brass);transition:width .6s var(--ease)}
+.est h3{font-size:1.7rem;margin-bottom:18px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{border:1px solid var(--lineD);border-radius:6px;padding:16px;text-align:left;background:none;font:inherit;cursor:pointer;transition:.35s var(--ease)}
+.opt:hover{border-color:var(--brass);transform:translateY(-2px)}
+.opt[aria-pressed=true]{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.opt small{display:block;color:var(--mute);font-size:.76rem}
+.est .stage{display:none}.est .stage.on{display:block;animation:in .6s var(--ease)}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+.est input{width:100%;padding:14px 16px;border:1px solid var(--lineD);border-radius:6px;font:inherit;margin-bottom:10px;background:#fff}
+.est .nav2{display:flex;justify-content:space-between;margin-top:22px;align-items:center}
+.est .nav2 button{font:inherit;cursor:pointer}
+.est .back{background:none;border:0;color:var(--mute)}
+.est .next{background:var(--ink);color:var(--bone);border:0;border-radius:99px;padding:12px 22px}
+
+/* FAQ */
+.faq{padding:14vh 0}
+.faq .grid{display:grid;grid-template-columns:1fr 1.4fr;gap:6vw}
+.faq h2{font-size:clamp(2.4rem,4.6vw,4.2rem)}
+details{border-bottom:1px solid var(--line);padding:24px 0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font-size:1.15rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--brass2);font-size:1.4rem;transition:transform .4s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:#bdb5a6;margin-top:12px;max-width:62ch}
+
+footer{border-top:1px solid var(--line);padding:10vh 0 40px}
+.fbig{font-family:Fraunces;font-weight:300;font-size:clamp(3rem,11vw,11rem);line-height:.9;letter-spacing:-.04em;color:#2a2823}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4vw;margin-bottom:8vh;font-size:.9rem;color:#bdb5a6}
+.fgrid h4{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-bottom:14px;font-weight:500}
+.fgrid a{display:block;margin-bottom:8px}.fgrid a:hover{color:var(--brass2)}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:40px;font-size:.74rem;color:var(--mute)}
+.mbar{display:none}
+
+.rv{opacity:0;transform:translateY(40px)}
+.noanim .rv,.noanim .hero .fade{opacity:1!important;transform:none!important}
+.noanim .line>span{transform:none!important}
+.noanim .hero .bg{clip-path:none!important}
+
+@media (max-width:900px){
+ .links,.phone{display:none}.burger{display:grid;place-items:center}
+ .navr .btn{display:none}
+ .hero{min-height:680px}
+ .hero .content{grid-template-columns:1fr;gap:22px;padding-bottom:12vh}
+ .hero .cap{top:auto;bottom:70px;right:5vw}
+ .intro{padding:12vh 0 10vh}
+ .intro .grid,.ba-head,.owner .grid,.cta .grid,.faq .grid{grid-template-columns:1fr;gap:36px}
+ .intro .facts{grid-template-columns:1fr 1fr 1fr}
+ .fact .n{font-size:2rem}
+ .htrack{flex-direction:column;width:auto;padding:0 5vw 10vh;gap:56px}
+ .card{width:100%}.card .ph{height:64vw}.card.cta-card{height:auto;gap:30px;padding:34px}
+ .slider{aspect-ratio:4/3}
+ .show-grid{grid-template-columns:1fr 1fr;gap:12px}
+ .t1,.t4{grid-column:1/3;margin:0}.t2,.t3{grid-column:auto;margin:0;aspect-ratio:3/4}
+ .steps,.quotes{grid-template-columns:1fr;gap:20px}
+ .prog{display:none}.step{border-top:1px solid var(--lineD);padding-top:26px}
+ .opts{grid-template-columns:1fr}
+ .est{padding:26px}
+ .fgrid{grid-template-columns:1fr 1fr}
+ .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;gap:8px;transform:translateY(140%);transition:transform .6s var(--ease)}
+ .mbar.on{transform:none}
+ .mbar a{flex:1;text-align:center;padding:15px;border-radius:99px;font-weight:500;font-size:.92rem}
+ .mbar .c{background:rgba(27,26,23,.9);backdrop-filter:blur(10px);border:1px solid var(--line)}
+ .mbar .q2{background:var(--brass);color:var(--ink)}
+ footer{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero .fade{opacity:1;transform:none}.line>span{transform:none}.hero .bg{clip-path:none}}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="wrap">
+ <a class="logo" href="#top" aria-label="First Class Construction home"><span class="mark">FC</span><span><b>First Class Construction</b><small>Inc. · Est. 2003</small></span></a>
+ <div class="links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Matt</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
+ <div class="navr"><a class="phone" href="tel:4403910060">Call or text <span>440-391-0060</span></a><a class="btn btn-brass" href="#quote">Get a Quote <span class="ar">→</span></a><button class="burger" id="burger" aria-label="Open menu">☰</button></div>
+</div></nav>
+<div class="mmenu" id="mmenu"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Matt</a><a href="#process">Process</a><a href="#quote">Get a Quote</a><a class="phone" style="display:block;font-size:1rem;margin-top:20px" href="tel:4403910060">Call or text <span>440-391-0060</span></a></div>
+
+<header class="hero" id="top">
+ <div class="bg"><img src="img/hero-dusk.webp" alt="Concept rendering: a renovated Northeast Ohio home with a modern glass addition at dusk" fetchpriority="high"></div>
+ <div class="shade"></div>
+ <div class="cap">Concept rendering for design preview</div>
+ <div class="content">
+  <h1 class="serif"><span class="line"><span>Northeast Ohio's</span></span><span class="line"><span><em>luxury</em> remodeler,</span></span><span class="line"><span>owner-led since 2003.</span></span></h1>
+  <div class="side fade">
+   <p>Luxury kitchens, spa-like bathrooms, home additions and ADUs, built by a Lake County team that treats your home like its own.</p>
+   <div class="ctas"><a class="btn btn-brass" href="#quote">Start your project <span class="ar">→</span></a><a class="btn btn-ghost" href="#work">See the transformations <span class="ar">↓</span></a></div>
+  </div>
+ </div>
+ <div class="scrollcue" aria-hidden="true"></div>
+</header>
+
+<div class="marq" aria-hidden="true"><div class="track">
+ <span>Kitchen Remodeling</span><i>✦</i><span>Bathroom Remodeling</span><i>✦</i><span>Home Additions</span><i>✦</i><span>ADU Construction</span><i>✦</i><span>Whole Home Remodeling</span><i>✦</i><span>Lake County, Ohio</span><i>✦</i>
+ <span>Kitchen Remodeling</span><i>✦</i><span>Bathroom Remodeling</span><i>✦</i><span>Home Additions</span><i>✦</i><span>ADU Construction</span><i>✦</i><span>Whole Home Remodeling</span><i>✦</i><span>Lake County, Ohio</span><i>✦</i>
+</div></div>
+
+<section class="intro"><div class="wrap">
+ <span class="eyebrow rv">Your home is your sanctuary</span>
+ <p class="big serif" id="bigtext" style="margin-top:28px">After everything on your to-do list, there's nothing better than coming home to a space that feels exactly right. We build those spaces.</p>
+ <div class="grid">
+  <p class="rv">If your Lake County home no longer sparks joy, a remodel can restore that sense of well-being. Start your day with coffee in a beautifully renovated kitchen and end it in a calm new bathroom. And when the family grows, we'll give it room to grow too.</p>
+  <div class="facts rv">
+   <div class="fact"><div class="n" data-count="20">0</div><div class="l">+ years in business</div></div>
+   <div class="fact"><div class="n">2003</div><div class="l">Owner-led since</div></div>
+   <div class="fact"><div class="n">100s</div><div class="l">of projects completed</div></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="svc" id="services">
+ <div class="wrap svc-head"><div><span class="eyebrow rv">What we build</span><h2 class="serif rv" style="margin-top:18px">We can make your vision a reality.</h2></div><p class="rv">Whether it's updating your kitchen or bathroom, or adding space for your growing family, one trusted team handles it from first sketch to final walkthrough.</p></div>
+ <div class="hwrap" id="hwrap"><div class="htrack" id="htrack">
+  <article class="card"><div class="ph"><span class="num">01</span><img src="img/kitchen-after.webp" alt="Concept rendering: luxury remodeled kitchen"></div><h3 class="serif">Kitchen Remodeling</h3><p>Transform your kitchen into a stunning space for unforgettable moments and family gatherings. Open floor plans, new plumbing and electrical, and walls moved where you need them.</p><a class="more" href="#quote">Plan my kitchen →</a></article>
+  <article class="card"><div class="ph"><span class="num">02</span><img src="img/bath-luxe.webp" alt="Concept rendering: spa-like primary bathroom"></div><h3 class="serif">Bathroom Remodeling</h3><p>Design a luxurious bathroom with a relaxing, spa-like atmosphere: custom showers, soaking tubs, double vanities and heated floors.</p><a class="more" href="#quote">Plan my bathroom →</a></article>
+  <article class="card"><div class="ph"><span class="num">03</span><img src="img/addition.webp" alt="Concept rendering: home addition"></div><h3 class="serif">Home Additions &amp; ADUs</h3><p>Expand your living space for your family's evolving needs, from a home office or kids' rooms to a full accessory dwelling unit.</p><a class="more" href="#quote">Plan my addition →</a></article>
+  <article class="card"><div class="ph"><span class="num">04</span><img src="img/wholehome-after.webp" alt="Concept rendering: open-plan living room and kitchen"></div><h3 class="serif">Whole Home Remodeling</h3><p>Expert whole home remodeling that transforms your living space beautifully, with one team coordinating every room.</p><a class="more" href="#quote">Plan my remodel →</a></article>
+  <article class="card cta-card"><span class="eyebrow">Not sure where to start?</span><div><h3 class="serif">Tell us the idea. We'll shape the plan.</h3><p style="margin-top:14px">Send a few photos and a short description, and we'll follow up with a phone consultation.</p></div><a class="btn btn-brass" href="#quote" style="align-self:flex-start">Get a Quote <span class="ar">→</span></a></article>
+ </div></div>
+ <p class="cap wrap" style="padding-bottom:6vh;margin-top:-8vh;color:#8d877a">Concept renderings for design preview. The live site will use First Class Construction's own project photos.</p>
+</section>
+
+<section class="ba" id="work"><div class="wrap">
+ <div class="ba-head"><div><span class="eyebrow rv">The transformation</span><h2 class="serif rv" style="margin-top:18px">Drag to see the difference.</h2></div><div><p class="rv">Homeowners want to see results, not promises. This interactive before-and-after lets visitors feel the change for themselves.</p><div class="tabsba rv" role="group" aria-label="Choose project"><button aria-pressed="true" data-b="img/kitchen-before.webp" data-a="img/kitchen-after.webp">Kitchen</button><button aria-pressed="false" data-b="img/bath-before.webp" data-a="img/bath-after.webp">Bathroom</button></div></div></div>
+ <div class="slider rv" id="slider"><img id="sb" src="img/kitchen-before.webp" alt="Concept rendering: room before remodel"><img id="sa" class="after" src="img/kitchen-after.webp" alt="Concept rendering: room after remodel"><div class="handle" id="handle"></div><div class="knob" id="knob">DRAG</div><span class="tag b">Before</span><span class="tag a">After</span></div>
+ <p class="cap" style="margin-top:14px">Concept renderings for design preview. To be replaced with FCC's real before-and-after photos.</p>
+</div></section>
+
+<section class="show"><div class="wrap">
+ <div class="show-grid">
+  <figure class="tile t1 rv"><img class="par" src="img/wholehome-after.webp" alt="Concept rendering: whole home remodel"><figcaption>Whole home · concept</figcaption></figure>
+  <figure class="tile t2 rv"><img class="par" src="img/bath-luxe.webp" alt="Concept rendering: primary bath"><figcaption>Primary bath · concept</figcaption></figure>
+  <figure class="tile t3 rv"><img class="par" src="img/bath-after.webp" alt="Concept rendering: bathroom"><figcaption>Bathroom · concept</figcaption></figure>
+  <figure class="tile t4 rv"><img class="par" src="img/addition.webp" alt="Concept rendering: addition"><figcaption>Addition · concept</figcaption></figure>
+ </div>
+ <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:6vh"><p class="cap">Concept renderings. Gallery will feature FCC's completed projects. <span class="need">[NEED: 12–20 real project photos]</span></p><a class="btn btn-ghost" href="#quote">Find more inspiration <span class="ar">→</span></a></div>
+</div></section>
+
+<section class="owner" id="about"><div class="wrap grid">
+ <figure class="ownimg rv"><div class="oi"><img class="par" src="img/owner-concept.webp" alt="Concept rendering: a contractor reviewing blueprints in a finished luxury kitchen"></div><figcaption class="cap">Concept rendering. Matt's photo to replace.</figcaption></figure>
+ <div>
+  <span class="eyebrow rv">Meet the owner</span>
+  <h2 class="serif rv">A builder since 19. Owner-led since 2003.</h2>
+  <p class="rv">Matt Urbas discovered his passion for building at 19, the first time he stepped onto a construction jobsite. After years of honing his skills, he opened First Class Construction in 2003 and has been dedicated to quality craftsmanship ever since.</p>
+  <p class="rv">He's known for building lasting relationships with his customers and takes pride in creating a positive experience on every project. Off the clock, you'll find him with his wife Natalie and their two daughters, or fishing and golfing.</p>
+  <div class="sig rv">Matt Urbas, Owner</div>
+ </div>
+</div></section>
+
+<section class="proc" id="process"><div class="wrap">
+ <span class="eyebrow rv">How it works</span>
+ <h2 class="serif rv">Three steps. Total peace of mind.</h2>
+ <div class="steps" id="steps"><div class="prog"><i id="progi"></i></div>
+  <div class="step rv"><div class="k serif">01</div><h3 class="serif">Contact us</h3><p>Call, text or use the form to share your ideas, with a few photos if you have them. We'll follow up with a phone consultation.</p></div>
+  <div class="step rv"><div class="k serif">02</div><h3 class="serif">We get to work</h3><p>We visit your home, take measurements, and go over budget, timeline and design choices. Once everything's final, we build.</p></div>
+  <div class="step rv"><div class="k serif">03</div><h3 class="serif">Enjoy your home</h3><p>Your home is transformed into the space you've always envisioned. Celebrate it with family and friends.</p></div>
+ </div>
+</div></section>
+
+<section class="rev"><div class="wrap">
+ <span class="eyebrow rv">What our customers are saying</span>
+ <h2 class="serif rv">Relationships built to last, like the work.</h2>
+ <div class="quotes">
+  <figure class="q rv"><blockquote>“Working with First Class Construction takes the stress out of remodeling. Impeccable workmanship. We are delighted with our remodeled master bath and bedroom.”</blockquote><figcaption><cite>Diane Vazach</cite><div class="src">As published on fccoh.com</div></figcaption></figure>
+  <figure class="q rv"><blockquote>“100% satisfaction on our master bed/bath reconstruction! Such a great team of hard working, conscientious people!”</blockquote><figcaption><cite>Karen Whalen-Cassano</cite><div class="src">As published on fccoh.com</div></figcaption></figure>
+  <figure class="q rv"><blockquote>“We love the work that Matt and the crew did on our house. What a great experience and job they did.”</blockquote><figcaption><cite>Sally Dessecker</cite><div class="src">As published on fccoh.com</div></figcaption></figure>
+ </div>
+ <p class="cap" style="margin-top:22px"><span class="need">[NEED: link to Google reviews profile]</span></p>
+</div></section>
+
+<section class="cta" id="quote"><div class="wrap grid">
+ <div>
+  <span class="eyebrow rv">Get a quote</span>
+  <h2 class="serif rv" style="margin-top:18px">Let's build your <em>dream space.</em></h2>
+  <p class="lead rv">Answer three quick questions and we'll reach out to schedule your consultation. Prefer to talk? Call or text Matt's team.</p>
+  <a class="btn btn-ghost rv" href="tel:4403910060">Call or text 440-391-0060 <span class="ar">→</span></a>
+ </div>
+ <div class="est rv" id="est">
+  <div class="bar"><i id="estbar"></i></div>
+  <div class="stage on" data-s="1"><h3 class="serif">What are you planning?</h3><div class="opts"><button class="opt" aria-pressed="false">Kitchen<small>Remodel or expand</small></button><button class="opt" aria-pressed="false">Bathroom<small>Spa-like upgrade</small></button><button class="opt" aria-pressed="false">Addition / ADU<small>More space</small></button><button class="opt" aria-pressed="false">Whole home<small>Top to bottom</small></button></div></div>
+  <div class="stage" data-s="2"><h3 class="serif">When would you like to start?</h3><div class="opts"><button class="opt" aria-pressed="false">As soon as possible</button><button class="opt" aria-pressed="false">In 1–3 months</button><button class="opt" aria-pressed="false">In 3–6 months</button><button class="opt" aria-pressed="false">Just exploring</button></div></div>
+  <div class="stage" data-s="3"><h3 class="serif">Where should we reach you?</h3><input placeholder="Your name" aria-label="Your name"><input placeholder="Phone or email" aria-label="Phone or email"><input placeholder="City / town" aria-label="City or town"><p class="cap">Mockup only: this form doesn't submit.</p></div>
+  <div class="nav2"><button class="back" id="back">← Back</button><button class="next" id="next">Continue</button></div>
+ </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap grid">
+ <div><span class="eyebrow rv">FAQ</span><h2 class="serif rv" style="margin-top:18px">Good questions, straight answers.</h2></div>
+ <div>
+  <details class="rv"><summary>Who are the contractors at First Class Construction, Inc.?</summary><p>A skilled team of remodelers and contractors with over 20 years of experience, proudly serving families in Lake County, Ohio and nearby areas.</p></details>
+  <details class="rv"><summary>What does a luxury bathroom remodel include?</summary><p>Premium finishes, fixtures and custom features such as double sinks, a custom shower, a tub and heated floors. Cost depends on size, materials and design; you'll receive an accurate quote after the in-home consultation.</p></details>
+  <details class="rv"><summary>What does a high-end home addition include?</summary><p>Often structural changes, kitchen upgrades and bathroom remodels, and it may include expanding a basement or garage. Excavation may be required depending on scope.</p></details>
+  <details class="rv"><summary>What does it cost to build an ADU?</summary><p>It depends on size, materials and finishes. FCC offers three ADU construction tiers. Schedule an in-home consultation for a precise quote.</p></details>
+ </div>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><a class="logo" href="#top"><span class="mark">FC</span><span><b>First Class Construction, Inc.</b><small>Luxury remodeling</small></span></a><p style="margin-top:18px;max-width:34ch">Lake County &amp; Northeast Ohio. <span class="need">[NEED: logo file, address, license info]</span></p></div>
+  <div><h4>Services</h4><a href="#services">Kitchens</a><a href="#services">Bathrooms</a><a href="#services">Additions &amp; ADUs</a><a href="#services">Whole home</a></div>
+  <div><h4>Company</h4><a href="#about">About Matt</a><a href="#process">Process</a><a href="#work">Our work</a><a href="#faq">FAQ</a></div>
+  <div><h4>Contact</h4><a href="tel:4403910060">440-391-0060</a><a href="#quote">Get a quote</a><span class="need">[NEED: email, hours]</span></div>
+ </div>
+ <div class="fbig" aria-hidden="true">First Class.</div>
+ <div class="legal"><span>© First Class Construction, Inc.</span><span>Design concept v2 by Elite B Growth · imagery is AI concept rendering</span></div>
+</div></footer>
+
+<div class="mbar" id="mbar"><a class="c" href="tel:4403910060">Call / text</a><a class="q2" href="#quote">Get a quote</a></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const STATIC=/static/.test(location.search);
+// nav
+const nav=q('#nav');let ly=0;addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('solid',y>60);nav.classList.toggle('hide',y>ly&&y>500&&!q('#mmenu').classList.contains('open'));ly=y;q('#mbar').classList.toggle('on',y>innerHeight*.7)},{passive:true});
+q('#burger').onclick=()=>q('#mmenu').classList.toggle('open');qa('#mmenu a').forEach(a=>a.onclick=()=>q('#mmenu').classList.remove('open'));
+// slider
+const sl=q('#slider'),sa=q('#sa'),h=q('#handle'),k=q('#knob');
+function setP(p){p=Math.max(0,Math.min(100,p));sa.style.clipPath=`inset(0 0 0 ${p}%)`;h.style.left=p+'%';k.style.left=p+'%'}
+let drag=false;const mv=e=>{const r=sl.getBoundingClientRect();const x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;setP(x/r.width*100)};
+sl.addEventListener('pointerdown',e=>{drag=true;mv(e);sl.setPointerCapture(e.pointerId)});sl.addEventListener('pointermove',e=>drag&&mv(e));sl.addEventListener('pointerup',()=>drag=false);
+qa('.tabsba button').forEach(b=>b.onclick=()=>{qa('.tabsba button').forEach(x=>x.setAttribute('aria-pressed',x===b));q('#sb').src=b.dataset.b;sa.src=b.dataset.a;setP(50)});
+// estimator
+let st=1;const stg=()=>{qa('.stage').forEach(s=>s.classList.toggle('on',+s.dataset.s===st));q('#estbar').style.width=(st/3*100)+'%';q('#next').textContent=st===3?'Request consultation':'Continue';q('#back').style.visibility=st===1?'hidden':'visible'};
+qa('.opt').forEach(o=>o.onclick=()=>{qa('.stage.on .opt').forEach(x=>x.setAttribute('aria-pressed',x===o));setTimeout(()=>{if(st<3){st++;stg()}},350)});
+q('#next').onclick=()=>{if(st<3){st++;stg()}else{q('#next').textContent='Thanks! (mockup)'}};q('#back').onclick=()=>{if(st>1){st--;stg()}};stg();
+// big text words
+const bt=q('#bigtext');bt.innerHTML=bt.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
+if(RM||STATIC||!window.gsap){document.documentElement.classList.add('noanim');qa('#bigtext .w').forEach(w=>w.style.opacity=1);qa('[data-count]').forEach(n=>n.textContent=n.dataset.count);return}
+gsap.registerPlugin(ScrollTrigger);
+const lenis=new Lenis({lerp:.09});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+qa('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=q(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{offset:-60})}}));
+// hero intro
+const tl=gsap.timeline({defaults:{ease:'expo.out'}});
+tl.to('.hero .bg',{clipPath:'inset(0% 0% 0% 0% round 0px)',duration:1.8,ease:'expo.inOut'})
+  .to('.hero .bg img',{scale:1,duration:2.2},'<')
+  .to('.line>span',{y:0,duration:1.3,stagger:.12},'-=1.1')
+  .to('.hero .fade',{opacity:1,y:0,duration:1},'-=.9');
+gsap.to('.hero .bg img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+gsap.to('.hero .content',{y:-80,opacity:.2,ease:'none',scrollTrigger:{trigger:'.hero',start:'center center',end:'bottom top',scrub:true}});
+// reveals
+qa('.rv').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
+// word reveal
+gsap.to('#bigtext .w',{opacity:1,stagger:.05,ease:'none',scrollTrigger:{trigger:'#bigtext',start:'top 80%',end:'bottom 45%',scrub:true}});
+// counter
+qa('[data-count]').forEach(n=>{const o={v:0};gsap.to(o,{v:+n.dataset.count,duration:1.8,ease:'power2.out',scrollTrigger:{trigger:n,start:'top 90%'},onUpdate:()=>n.textContent=Math.round(o.v)})});
+// horizontal services (desktop)
+ScrollTrigger.matchMedia({
+ '(min-width:901px)':()=>{const tr=q('#htrack');const d=()=>tr.scrollWidth-innerWidth;
+  gsap.to(tr,{x:()=>-d(),ease:'none',scrollTrigger:{trigger:'#hwrap',start:'top 8%',end:()=>'+='+d(),pin:true,scrub:1,invalidateOnRefresh:true}});
+  qa('.card .ph img').forEach(i=>gsap.fromTo(i,{xPercent:-6},{xPercent:6,ease:'none',scrollTrigger:{trigger:'#hwrap',start:'top 8%',end:()=>'+='+d(),scrub:true}}));},
+ '(max-width:900px)':()=>{qa('.card .ph img').forEach(i=>gsap.fromTo(i,{scale:1.25},{scale:1.05,ease:'none',scrollTrigger:{trigger:i,start:'top bottom',end:'bottom top',scrub:true}}))}
+});
+// slider auto-sweep on enter
+ScrollTrigger.create({trigger:'#slider',start:'top 70%',once:true,onEnter:()=>{const o={p:85};gsap.to(o,{p:50,duration:1.6,ease:'expo.inOut',onUpdate:()=>setP(o.p),onStart:()=>setP(85)})}});
+// showcase parallax
+qa('.tile .par,.ownimg .par').forEach((i,n)=>{gsap.set(i,{scale:1.2});gsap.fromTo(i,{yPercent:-8},{yPercent:8,ease:'none',scrollTrigger:{trigger:i.parentNode,start:'top bottom',end:'bottom top',scrub:true}})});
+qa('.tile').forEach(t=>gsap.fromTo(t,{clipPath:'inset(18% 0% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'expo.out',duration:1.4,scrollTrigger:{trigger:t,start:'top 85%'}}));
+// process line
+gsap.to('#progi',{scaleX:1,ease:'none',scrollTrigger:{trigger:'#steps',start:'top 75%',end:'bottom 55%',scrub:true}});
+// footer big
+gsap.fromTo('.fbig',{yPercent:40,opacity:0},{yPercent:0,opacity:1,ease:'expo.out',duration:1.4,scrollTrigger:{trigger:'.fbig',start:'top 95%'}});
+addEventListener('load',()=>ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>

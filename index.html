@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>First Class Construction, Inc. | Luxury Remodeling in Northeast Ohio (Design Concept v2 R2)</title>
+<meta name="description" content="Luxury kitchen, bathroom, home addition and whole home remodeling in Lake County and Northeast Ohio.">
+<!-- DESIGN CONCEPT v2 — Round 2 (R2) built on Version 2 by Elite B Growth. All room/exterior imagery is AI-generated CONCEPT imagery, not First Class Construction projects. Replace with FCC's real project photos. -->
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+ --ink:#121210;
+ --ink2:#1b1a17;
+ --bone:#f3eee5;
+ --paper:#faf7f1;
+ --brass:#c19a5b;
+ --brass2:#e0c48f;
+ --brassD:#7d5e2f;
+ --moss:#25322c;
+ --moss2:#304139;
+ --moss-ink:#ced6d0;
+ --mute:#8f887b;
+ --muteD:#655e53;
+ --line:rgba(243,238,229,.14);
+ --lineD:rgba(18,18,16,.13);
+ --ease:cubic-bezier(.22,1,.36,1)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--bone);font-family:"Inter Tight",system-ui,sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+p,blockquote{text-wrap:pretty}
+:where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--brass2);outline-offset:3px}
+.svc :where(a,button,input,[tabindex]):focus-visible,.est :where(a,button,input,[tabindex]):focus-visible{outline-color:var(--ink)}
+.visually-hidden:where(:not(:focus-within,:active)){position:absolute!important;clip-path:inset(50%)!important;overflow:hidden!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;border:0!important;white-space:nowrap!important}
+.skip-link:focus{position:fixed;top:14px;left:14px;z-index:200;padding:10px 18px;border-radius:999px;background:var(--brass2);color:var(--ink);font-weight:600;font-size:.88rem}
+.serif{font-family:Fraunces,Georgia,serif;font-weight:300;letter-spacing:-.02em;line-height:1.04;text-wrap:balance}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass2);display:inline-flex;gap:12px;align-items:center}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;flex-shrink:0}
+.wrap{width:min(1320px,90vw);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-block-size:48px;padding:14px 24px;border-radius:999px;font-weight:500;font-size:.94rem;cursor:pointer;border:1px solid transparent;transition:transform .45s var(--ease),background .35s,border-color .35s,color .35s;position:relative;overflow:hidden;isolation:isolate}
+.btn:active{transform:scale(.98)}
+.btn .ar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;transition:transform .45s var(--ease)}
+.btn:hover .ar{transform:rotate(-45deg)}
+.btn-brass{background:var(--brass);color:var(--ink)}
+.btn-brass .ar{background:var(--ink);color:var(--brass2)}
+.btn-brass:hover{background:var(--brass2)}
+.btn-ghost{border-color:var(--line);color:var(--bone);background:transparent}
+.btn-ghost .ar{border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass2)}
+.btn-chat{background:var(--moss);border-color:rgba(224,196,143,.45);color:var(--bone)}
+.btn-chat:hover{background:var(--moss2);border-color:var(--brass2)}
+.btn-chat .chat-ico{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:rgba(224,196,143,.16);color:var(--brass2);flex-shrink:0}
+.need{display:inline-block;font-size:.72rem;letter-spacing:.05em;color:#ffdca3;background:rgba(255,175,68,.12);border:1px dashed rgba(255,196,110,.55);padding:3px 10px;border-radius:4px;line-height:1.45}
+.cap{font-size:.74rem;color:var(--mute);letter-spacing:.03em}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:22px 0;transition:background .5s,padding .5s,transform .5s var(--ease)}
+nav.solid{background:rgba(18,18,16,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:14px 0;border-bottom:1px solid var(--line)}
+nav.hide{transform:translateY(-100%)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:12px}
+.mark{width:40px;height:40px;border:1px solid var(--brass);display:grid;place-items:center;font-family:Fraunces;color:var(--brass2);font-size:1rem;letter-spacing:.02em;flex-shrink:0}
+.logo b{font-family:Fraunces;font-weight:400;font-size:1.08rem;letter-spacing:.01em;display:block;line-height:1.1}
+.logo small{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+.links{display:flex;gap:32px;font-size:.88rem;color:#d6cfc2}
+.links a{position:relative;padding:6px 0}
+.links a::after{content:"";position:absolute;left:0;bottom:2px;height:1px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.links a:hover::after,.links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+.navr{display:flex;align-items:center;gap:16px}
+.phone{font-size:.9rem;color:#d6cfc2;white-space:nowrap}.phone span{color:var(--brass2)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:none;color:var(--bone);font-size:1.1rem;cursor:pointer}
+.mmenu{position:fixed;inset:0;background:var(--ink);z-index:70;display:flex;flex-direction:column;justify-content:center;padding:80px 8vw 40px;gap:16px;clip-path:circle(0% at 92% 5%);visibility:hidden;transition:clip-path .75s var(--ease),visibility .75s}
+.mmenu.open{clip-path:circle(150% at 92% 5%);visibility:visible}
+.mmenu a{font-family:Fraunces;font-size:clamp(1.8rem,7vw,2.4rem);font-weight:300;padding:4px 0}
+.mmenu-close{position:absolute;top:20px;right:5vw;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--bone);font-size:1.3rem;cursor:pointer;display:grid;place-items:center}
+
+/* HERO */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end}
+.hero .bg{position:absolute;inset:0;will-change:clip-path}
+.js-anim .hero .bg{clip-path:inset(12% 18% 12% 18% round 6px)}
+.hero .bg img{width:100%;height:118%;object-fit:cover;will-change:transform}
+.js-anim .hero .bg img{transform:scale(1.15)}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,18,16,.58) 0%,rgba(18,18,16,.08) 35%,rgba(18,18,16,.24) 55%,rgba(18,18,16,.93) 100%),linear-gradient(90deg,rgba(18,18,16,.48),transparent 62%)}
+.hero .content{position:relative;z-index:2;width:min(1320px,90vw);margin:0 auto;padding-bottom:7.5vh;display:grid;grid-template-columns:1.55fr 1fr;gap:5vw;align-items:end}
+.hero h1{font-size:clamp(2.8rem,6.8vw,7rem)}
+.hero h1 em{font-style:italic;color:var(--brass2)}
+.line{display:block;overflow:hidden;padding-bottom:.06em}
+.line>span{display:inline-block}
+.js-anim .line>span{transform:translateY(110%)}
+.hero .side p{color:#ded7ca;max-width:40ch;margin-bottom:26px;font-size:1.02rem}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.js-anim .hero .fade{opacity:0;transform:translateY(20px)}
+.hero .cap{position:absolute;right:4vw;top:106px;z-index:2;color:rgba(243,238,229,.65)}
+.scrollcue{position:absolute;left:50%;bottom:20px;z-index:2;width:1px;height:44px;background:var(--line);overflow:hidden}
+.scrollcue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--brass2);animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+
+/* INTRO (Marquee removed cleanly — balanced seamless transition from hero) */
+section{position:relative}
+.intro{padding:clamp(96px,14vh,152px) 0 clamp(80px,11vh,124px);border-top:1px solid var(--line)}
+.intro .big{font-size:clamp(1.9rem,4vw,3.9rem);max-width:23ch}
+.intro .big .w{transition:opacity .2s}
+.js-anim .intro .big .w{opacity:.14}
+.intro .grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-top:clamp(48px,8vh,86px);align-items:start}
+.intro .grid p{color:#c6beb0;max-width:52ch}
+.intro .facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);gap:16px}
+.fact{padding:24px 0;border-bottom:1px solid var(--line)}
+.fact .n{font-family:Fraunces;font-size:clamp(2.2rem,3.8vw,3.5rem);color:var(--bone);font-weight:300;line-height:1.05}
+.fact .l{font-size:.8rem;color:var(--mute);letter-spacing:.05em;margin-top:6px}
+
+/* SERVICES horizontal scroll */
+.svc{background:var(--paper);color:var(--ink);padding-bottom:clamp(64px,9vh,104px)}
+.svc-head{padding:clamp(76px,11vh,124px) 0 clamp(36px,5vh,56px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.svc-head h2{font-size:clamp(2.4rem,5.4vw,5rem);max-width:13ch}
+.svc-head-right{display:flex;flex-direction:column;gap:20px;max-width:44ch}
+.svc-head p{color:#504a40}
+.svc .eyebrow{color:var(--brassD)}
+.svc-controls{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 0 22px}
+.svc-prog{display:flex;align-items:center;gap:14px;flex:1;max-width:340px}
+.svc-count{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muteD);font-variant-numeric:tabular-nums;white-space:nowrap}
+.svc-rail{flex:1;height:2px;background:var(--lineD);border-radius:99px;overflow:hidden}
+.svc-rail i{display:block;height:100%;width:20%;background:var(--brassD);transition:width .35s var(--ease)}
+.svc-arrows{display:flex;gap:10px}
+.svc-btn{width:44px;height:44px;border-radius:50%;border:1px solid rgba(18,18,16,.24);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;font-size:1rem;transition:background .3s,border-color .3s,color .3s,transform .3s}
+.svc-btn:hover:not(:disabled){background:var(--ink);border-color:var(--ink);color:var(--bone);transform:translateY(-1px)}
+.svc-btn:disabled{opacity:.35;cursor:not-allowed}
+.hwrap{overflow:hidden}
+.hwrap.is-scrollable .htrack-scroll{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--brassD) transparent}
+@media (prefers-reduced-motion:no-preference){.hwrap.is-scrollable .htrack-scroll{scroll-behavior:smooth}}
+.htrack{display:flex;gap:clamp(20px,2.2vw,34px);padding:4px 5vw clamp(36px,5vh,56px);width:max-content}
+.card{width:clamp(310px,34vw,490px);flex:0 0 auto;position:relative;display:flex;flex-direction:column;scroll-snap-align:start;transition:transform .5s var(--ease)}
+.card:hover{transform:translateY(-4px)}
+.card .ph{width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:6px;position:relative;background:#e5dfd2}
+.card .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.1s var(--ease)}
+.card:hover .ph img{transform:scale(1)}
+.card .num{position:absolute;top:16px;left:16px;z-index:2;font-size:.72rem;letter-spacing:.18em;color:var(--bone);background:rgba(18,18,16,.66);backdrop-filter:blur(6px);padding:6px 12px;border-radius:99px}
+.card h3{font-size:clamp(1.65rem,2.3vw,2.35rem);margin:20px 0 8px}
+.card p{color:#504a40;max-width:44ch;font-size:.96rem}
+.card .more{margin-top:auto;padding-top:16px;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:.9rem;border-bottom:1px solid var(--ink);padding-bottom:3px;transition:color .3s,border-color .3s}
+.card .more:hover{color:var(--brassD);border-color:var(--brassD)}
+.card.cta-card{background:var(--ink);color:var(--bone);border-radius:6px;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:4/3;align-self:flex-start}
+.card.cta-card .eyebrow{color:var(--brass2)}
+.card.cta-card h3{font-size:clamp(1.75rem,2.5vw,2.5rem);margin:14px 0 0}
+.card.cta-card p{color:#c6beb0;margin-top:12px}
+.svc-note{color:var(--muteD);padding-top:8px}
+
+/* BEFORE AFTER (Evaluated & enhanced for homeowner decision value) */
+.ba{padding:clamp(84px,13vh,140px) 0 clamp(56px,8vh,88px)}
+.ba-head{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:end;margin-bottom:44px}
+.ba-head h2{font-size:clamp(2.4rem,5.2vw,5rem);margin-top:16px}
+.ba-head p{color:#c6beb0;max-width:48ch}
+.ba-toolbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.tabsba,.presetsba{display:flex;gap:8px;flex-wrap:wrap}
+.tabsba button,.presetsba button{background:none;border:1px solid var(--line);color:#d6cfc2;min-block-size:40px;padding:8px 18px;border-radius:99px;font:inherit;font-size:.84rem;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.tabsba button:hover,.presetsba button:hover{border-color:var(--brass)}
+.tabsba button[aria-pressed=true]{background:var(--bone);color:var(--ink);border-color:var(--bone);font-weight:500}
+.presetsba button[aria-pressed=true]{background:rgba(193,154,91,.18);border-color:var(--brass);color:var(--brass2)}
+.slider{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;user-select:none;touch-action:pan-y;border:1px solid var(--line);background:var(--ink2)}
+.slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.slider .after{clip-path:inset(0 0 0 50%)}
+.slider .handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--bone);transform:translateX(-1px);pointer-events:none;box-shadow:0 0 18px rgba(0,0,0,.45)}
+.slider .knob{position:absolute;top:50%;left:50%;width:68px;height:68px;border-radius:50%;background:var(--bone);color:var(--ink);transform:translate(-50%,-50%);display:grid;place-items:center;font-size:.68rem;letter-spacing:.14em;font-weight:600;box-shadow:0 10px 36px rgba(0,0,0,.42);pointer-events:none;transition:transform .25s var(--ease)}
+.slider.is-focused .knob,.slider:hover .knob{transform:translate(-50%,-50%) scale(1.06)}
+.slider.is-focused{outline:2px solid var(--brass2);outline-offset:4px}
+.ba-range{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:4}
+.slider .tag{position:absolute;bottom:16px;z-index:3;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;background:rgba(18,18,16,.76);backdrop-filter:blur(6px);padding:7px 14px;border-radius:99px;border:1px solid rgba(243,238,229,.16);pointer-events:none;transition:opacity .25s}
+.slider .tag.b{left:16px;color:var(--bone)}
+.slider .tag.a{right:16px;color:var(--brass2);border-color:rgba(224,196,143,.35)}
+.ba-details{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ba-point{padding:16px 18px;border:1px solid var(--line);border-radius:6px;background:rgba(27,26,23,.55)}
+.ba-point small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass2);margin-bottom:4px}
+.ba-point span{font-size:.9rem;color:#d6cfc2}
+
+/* SHOWCASE stack */
+.show{padding:clamp(24px,4vh,48px) 0 clamp(84px,12vh,136px)}
+.show-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:2vw}
+.tile{overflow:hidden;border-radius:6px;position:relative;background:var(--ink2)}
+.tile img{width:100%;height:100%;object-fit:cover}
+.t1{grid-column:1/8;aspect-ratio:4/3}.t2{grid-column:8/13;aspect-ratio:3/4;margin-top:12vh}
+.t3{grid-column:2/6;aspect-ratio:1;margin-top:-8vh}.t4{grid-column:7/13;aspect-ratio:16/10}
+.tile figcaption{position:absolute;left:16px;bottom:14px;font-size:.78rem;background:rgba(18,18,16,.68);backdrop-filter:blur(6px);padding:6px 12px;border-radius:99px;border:1px solid rgba(243,238,229,.14)}
+
+/* ABOUT US (renamed from Meet the Owner — preserving Matt Urbas copy & image structure) */
+.owner{background:var(--ink2);padding:clamp(84px,13vh,140px) 0}
+.owner .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center}
+.ownimg .oi{aspect-ratio:4/5;overflow:hidden;border-radius:6px;position:relative}
+.ownimg .oi::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(193,154,91,.35);border-radius:6px;pointer-events:none}
+.ownimg img{width:100%;height:100%;object-fit:cover}
+.ownimg figcaption{margin-top:12px}
+.owner h2{font-size:clamp(2.3rem,4.6vw,4.4rem);margin:18px 0 24px}
+.owner p{color:#c6beb0;margin-bottom:16px;max-width:56ch}
+.owner .sig{font-family:Fraunces;font-style:italic;font-size:1.55rem;color:var(--brass2);margin-top:22px}
+
+/* PROCESS (3 Steps to Build — styled with Version 1's signature moss green #25322c) */
+.proc{padding:clamp(88px,13vh,144px) 0;background:radial-gradient(ellipse at 18% 0%,rgba(224,196,143,.1),transparent 52%),var(--moss);color:var(--bone)}
+.proc .eyebrow{color:var(--brass2)}
+.proc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(48px,7vh,76px)}
+.proc h2{font-size:clamp(2.4rem,5.2vw,5rem);max-width:14ch;margin-top:16px}
+.proc-note{max-width:38ch;color:var(--moss-ink);font-size:.96rem}
+.steps{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding-top:44px}
+.prog{position:absolute;top:8px;left:0;right:0;height:1px;background:rgba(243,238,229,.18);z-index:1}
+.prog i{position:absolute;inset:0;background:var(--brass2);transform:scaleX(0);transform-origin:left}
+.step{position:relative;z-index:2;padding:30px 28px;border:1px solid rgba(243,238,229,.14);border-radius:8px;background:rgba(18,18,16,.18);display:flex;flex-direction:column}
+.step-dot{position:absolute;top:-44px;left:28px;z-index:2;width:16px;height:16px;border-radius:50%;background:var(--moss);border:2px solid var(--brass2)}
+.step-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px}
+.step .k{font-family:Fraunces;font-size:clamp(3rem,4.4vw,4.2rem);color:var(--brass2);line-height:1;font-weight:300}
+.step-tag{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--moss-ink);opacity:.85}
+.step h3{font-size:clamp(1.55rem,2.1vw,1.95rem);margin-bottom:12px}
+.step p{color:var(--moss-ink);font-size:.96rem}
+
+/* PROJECT PARTNERSHIP (Collaborative section — exact client prompt message + editable placeholder) */
+.partner{padding:clamp(84px,12vh,132px) 0;background:var(--ink)}
+.partner-box{border:1px solid rgba(193,154,91,.32);border-radius:10px;padding:clamp(28px,5vw,60px);background:linear-gradient(135deg,rgba(37,50,44,.42) 0%,rgba(27,26,23,.92) 60%);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:center}
+.partner h2{font-size:clamp(2rem,4vw,3.6rem);margin:16px 0 22px}
+.partner-slot{border:1px dashed rgba(224,196,143,.45);border-radius:6px;padding:18px 20px;background:rgba(18,18,16,.38);margin-bottom:24px}
+.partner-slot p{color:#d6cfc2;margin-top:8px;font-size:.95rem}
+.partner-pillars{display:grid;gap:14px}
+.pillar{padding:18px 20px;border:1px solid var(--line);border-radius:6px;background:rgba(18,18,16,.48);display:flex;gap:16px;align-items:flex-start}
+.pillar b{font-family:Fraunces;font-weight:400;font-size:1.3rem;color:var(--brass2);line-height:1.1}
+.pillar h3{font-size:1.05rem;font-weight:500;margin-bottom:4px;color:var(--bone)}
+.pillar p{font-size:.88rem;color:#bdb5a6}
+
+/* REVIEWS */
+.rev{padding:clamp(84px,13vh,136px) 0;background:var(--ink2)}
+.rev h2{font-size:clamp(2.3rem,4.8vw,4.5rem);max-width:17ch;margin:16px 0 clamp(40px,6vh,68px)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.q{border:1px solid var(--line);border-radius:8px;padding:34px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;background:rgba(18,18,16,.35);transition:border-color .4s,transform .5s var(--ease)}
+.q:hover{border-color:var(--brass);transform:translateY(-4px)}
+.q blockquote{font-family:Fraunces;font-size:1.28rem;font-weight:300;line-height:1.38}
+.q cite{font-style:normal;font-size:.88rem;color:var(--brass2);display:block}
+.q .src{font-size:.72rem;color:var(--mute);margin-top:2px}
+
+/* ESTIMATOR / QUOTE + DIRECT CHAT */
+.cta{padding:clamp(88px,13vh,144px) 0;background:radial-gradient(ellipse at 82% 8%,rgba(193,154,91,.18),transparent 54%),var(--ink)}
+.cta .grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start}
+.cta h2{font-size:clamp(2.6rem,5.8vw,5.4rem);margin-top:16px}
+.cta h2 em{font-style:italic;color:var(--brass2)}
+.cta .lead{color:#c6beb0;margin:22px 0 28px;max-width:44ch}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.chat-hint{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.est{background:var(--paper);color:var(--ink);border-radius:10px;padding:clamp(26px,3.2vw,40px)}
+.est .bar{height:3px;background:var(--lineD);border-radius:3px;margin-bottom:24px;overflow:hidden}
+.est .bar i{display:block;height:100%;width:33.3%;background:var(--brassD);transition:width .5s var(--ease)}
+.est h3{font-size:1.7rem;margin-bottom:16px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{border:1px solid var(--lineD);border-radius:6px;padding:15px 16px;text-align:left;background:#fff;font:inherit;color:var(--ink);cursor:pointer;transition:border-color .25s,transform .25s,background .25s,color .25s}
+.opt:hover{border-color:var(--brass);transform:translateY(-2px)}
+.opt[aria-pressed=true]{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+.opt small{display:block;color:var(--muteD);font-size:.76rem;margin-top:2px}
+.opt[aria-pressed=true] small{color:var(--brass2)}
+.est .stage{display:none}.est .stage.on{display:block;animation:in .45s var(--ease)}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.est-field{margin-bottom:12px}
+.est-field label{display:block;font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#4a443b;margin-bottom:5px}
+.est input{width:100%;padding:13px 15px;border:1px solid rgba(18,18,16,.24);border-radius:6px;font:inherit;background:#fff;color:var(--ink)}
+.est .cap{color:var(--muteD)}
+.est-status{margin-top:10px;padding:12px 14px;border-radius:6px;background:rgba(37,50,44,.08);border:1px solid rgba(37,50,44,.25);color:#202b26;font-size:.88rem;display:none}
+.est-status.show{display:block}
+.est .nav2{display:flex;justify-content:space-between;margin-top:22px;align-items:center;gap:12px}
+.est .nav2 button{font:inherit;cursor:pointer;min-block-size:44px}
+.est .back{background:none;border:0;color:var(--muteD);padding:6px 4px}
+.est .next{background:var(--ink);color:var(--bone);border:0;border-radius:999px;padding:12px 24px;font-weight:500}
+.est .next:hover{background:var(--moss)}
+
+/* FAQ & SERVICE AREAS */
+.faq{padding:clamp(84px,12vh,132px) 0;background:var(--ink2)}
+.faq .grid{display:grid;grid-template-columns:1fr 1.35fr;gap:6vw;align-items:start}
+.faq h2{font-size:clamp(2.2rem,4.4vw,4rem);margin-top:16px}
+.areas{margin-top:34px;padding:24px;border:1px solid var(--line);border-radius:8px;background:rgba(18,18,16,.45)}
+.areas h3{font-size:1.35rem;margin:12px 0 8px}
+.areas p{color:#bdb5a6;font-size:.92rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{border:1px solid var(--line);padding:7px 14px;border-radius:99px;font-size:.84rem;color:var(--bone)}
+.chips .need-chip{border:1px dashed rgba(255,196,110,.6);color:#ffdca3;background:rgba(255,175,68,.1)}
+details{border-bottom:1px solid var(--line);padding:22px 0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:1.12rem;padding:4px 0}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--brass2);font-size:1.4rem;flex-shrink:0;transition:transform .35s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:#c6beb0;margin-top:12px;max-width:62ch}
+@media (prefers-reduced-motion:no-preference){
+ details::details-content{interpolate-size:allow-keywords;overflow:clip;contain:layout;transition:block-size .3s ease,content-visibility .3s allow-discrete}
+ details:not([open])::details-content{block-size:0}
+}
+
+/* DIRECT CHAT DIALOG */
+dialog.chat-modal{margin:auto;width:min(480px,92vw);border:1px solid rgba(224,196,143,.35);border-radius:12px;background:var(--ink2);color:var(--bone);padding:clamp(24px,4vw,34px);box-shadow:0 24px 80px rgba(0,0,0,.65)}
+dialog.chat-modal::backdrop{background:rgba(10,10,8,.76);backdrop-filter:blur(6px)}
+.chat-modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:16px}
+.chat-modal-close{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--bone);font-size:1.2rem;cursor:pointer;display:grid;place-items:center;flex-shrink:0}
+.chat-modal h3{font-size:1.85rem;margin-top:8px}
+.chat-modal p{color:#c6beb0;font-size:.94rem;margin-bottom:16px}
+.chat-modal-box{padding:16px;border-radius:8px;border:1px dashed rgba(255,196,110,.5);background:rgba(255,175,68,.08);margin-bottom:20px}
+.chat-modal-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;background:var(--ink)}
+.fbig{font-family:Fraunces;font-weight:300;font-size:clamp(3rem,11vw,11rem);line-height:.9;letter-spacing:-.04em;color:#2a2823}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4vw;margin-bottom:7vh;font-size:.9rem;color:#c6beb0}
+.fgrid h4{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);margin-bottom:14px;font-weight:500}
+.fgrid a,.fgrid button.link-btn{display:block;margin-bottom:8px;background:none;border:0;padding:0;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.fgrid a:hover,.fgrid button.link-btn:hover{color:var(--brass2)}
+.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:36px;font-size:.74rem;color:var(--mute)}
+.mbar{display:none}
+
+.js-anim .rv{opacity:0;transform:translateY(32px)}
+.noanim .rv,.noanim .hero .fade{opacity:1!important;transform:none!important}
+.noanim .line>span{transform:none!important}
+.noanim .hero .bg{clip-path:none!important}
+
+@media (max-width:900px){
+ .links,.phone{display:none}.burger{display:grid;place-items:center}
+ .navr .btn{display:none}
+ .hero{min-height:660px}
+ .hero .content{grid-template-columns:1fr;gap:22px;padding-bottom:11vh}
+ .hero .cap{top:auto;bottom:68px;right:5vw}
+ .intro .grid,.ba-head,.owner .grid,.partner-box,.cta .grid,.faq .grid{grid-template-columns:1fr;gap:34px}
+ .intro .facts{grid-template-columns:repeat(3,1fr)}
+ .fact .n{font-size:1.85rem}
+ /* Preserve horizontal touch scrolling on mobile & tablet — never collapse to vertical grid */
+ .htrack-scroll{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+ .htrack-scroll::-webkit-scrollbar{display:none}
+ .htrack{flex-direction:row;width:max-content;padding:4px 5vw 32px;gap:18px}
+ .card{width:clamp(272px,78vw,380px)}
+ .card .ph,.card.cta-card{aspect-ratio:4/3}
+ .card.cta-card{padding:24px}
+ .slider{aspect-ratio:4/3}
+ .ba-details{grid-template-columns:1fr}
+ .show-grid{grid-template-columns:1fr 1fr;gap:12px}
+ .t1,.t4{grid-column:1/3;margin:0}.t2,.t3{grid-column:auto;margin:0;aspect-ratio:3/4}
+ /* Mobile vertical timeline for 3 Steps */
+ .steps{grid-template-columns:1fr;gap:20px;padding-top:0;padding-left:32px}
+ .prog{top:0;bottom:0;left:7px;right:auto;width:1px;height:auto}
+ .prog i{transform-origin:top}
+ .step-dot{top:28px;left:-33px}
+ .quotes{grid-template-columns:1fr;gap:18px}
+ .opts{grid-template-columns:1fr}
+ .fgrid{grid-template-columns:1fr 1fr}
+ .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;gap:8px;transform:translateY(140%);transition:transform .5s var(--ease)}
+ .mbar.on{transform:none}
+ .mbar a,.mbar button{flex:1;text-align:center;min-block-size:46px;padding:12px 10px;border-radius:99px;font-weight:500;font-size:.86rem;border:1px solid transparent;cursor:pointer}
+ .mbar .c{background:rgba(27,26,23,.94);backdrop-filter:blur(10px);border-color:var(--line);color:var(--bone)}
+ .mbar .ch{background:var(--moss);border-color:rgba(224,196,143,.45);color:var(--bone)}
+ .mbar .q2{background:var(--brass);color:var(--ink)}
+ footer{padding-bottom:108px}
+}
+@media (prefers-reduced-motion:reduce){
+ *{animation:none!important;transition:none!important}
+ .rv,.hero .fade{opacity:1!important;transform:none!important}
+ .line>span{transform:none!important}
+ .hero .bg{clip-path:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip-link visually-hidden" href="#main-content">Skip to main content</a>
+
+<nav id="nav" aria-label="Primary"><div class="wrap">
+ <a class="logo" href="#top" aria-label="First Class Construction home"><span class="mark">FC</span><span><b>First Class Construction</b><small>Inc. · Est. 2003</small></span></a>
+ <div class="links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Us</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
+ <div class="navr"><a class="phone" href="tel:4403910060">Call or text <span>440-391-0060</span></a><a class="btn btn-brass" href="#quote">Get a Quote <span class="ar">→</span></a><button type="button" class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu">☰</button></div>
+</div></nav>
+
+<div class="mmenu" id="mmenu" role="dialog" aria-modal="true" aria-label="Mobile navigation" hidden>
+ <button type="button" class="mmenu-close" id="mclose" aria-label="Close menu">×</button>
+ <a href="#services">Services</a>
+ <a href="#work">Our Work</a>
+ <a href="#about">About Us</a>
+ <a href="#process">Process</a>
+ <a href="#partnership">Partnership</a>
+ <a href="#faq">FAQ</a>
+ <a href="#quote">Get a Quote</a>
+ <a class="phone" style="display:block;font-size:1rem;margin-top:16px" href="tel:4403910060">Call or text <span>440-391-0060</span></a>
+</div>
+
+<header class="hero" id="top">
+ <div class="bg"><img src="img/hero-dusk.webp" alt="Concept rendering: a renovated Northeast Ohio home with a modern glass addition at dusk" fetchpriority="high"></div>
+ <div class="shade"></div>
+ <div class="cap">Concept rendering for design preview</div>
+ <div class="content">
+  <h1 class="serif"><span class="line"><span>Northeast Ohio's</span></span><span class="line"><span><em>luxury</em> remodeler,</span></span><span class="line"><span>owner-led since 2003.</span></span></h1>
+  <div class="side fade">
+   <p>Luxury kitchens, spa-like bathrooms, home additions and ADUs, built by a Lake County team that treats your home like its own.</p>
+   <div class="ctas"><a class="btn btn-brass" href="#quote">Start your project <span class="ar">→</span></a><a class="btn btn-ghost" href="#work">See the transformations <span class="ar">↓</span></a></div>
+  </div>
+ </div>
+ <div class="scrollcue" aria-hidden="true"></div>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+<section class="intro"><div class="wrap">
+ <span class="eyebrow rv">Your home is your sanctuary</span>
+ <p class="big serif" id="bigtext" style="margin-top:26px">After everything on your to-do list, there's nothing better than coming home to a space that feels exactly right. We build those spaces.</p>
+ <div class="grid">
+  <p class="rv">If your Lake County home no longer sparks joy, a remodel can restore that sense of well-being. Start your day with coffee in a beautifully renovated kitchen and end it in a calm new bathroom. And when the family grows, we'll give it room to grow too.</p>
+  <div class="facts rv">
+   <div class="fact"><div class="n" data-count="20">20</div><div class="l">+ years in business</div></div>
+   <div class="fact"><div class="n">2003</div><div class="l">Owner-led since</div></div>
+   <div class="fact"><div class="n">100s</div><div class="l">of projects completed</div></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="svc" id="services">
+ <div class="wrap svc-head">
+  <div>
+   <span class="eyebrow rv">What we build</span>
+   <h2 class="serif rv" style="margin-top:16px">We can make your vision a reality.</h2>
+  </div>
+  <div class="svc-head-right">
+   <p class="rv">Whether it's updating your kitchen or bathroom, or adding space for your growing family, one trusted team handles it from first sketch to final walkthrough.</p>
+  </div>
+ </div>
+ <div class="hwrap" id="hwrap" role="region" aria-label="Remodeling types">
+  <div class="wrap svc-controls" aria-label="Remodeling categories navigation">
+   <div class="svc-prog">
+    <span class="svc-count" id="svcCount">01 / 05</span>
+    <span class="svc-rail" aria-hidden="true"><i id="svcRail"></i></span>
+   </div>
+   <div class="svc-arrows">
+    <button type="button" class="svc-btn" id="svcPrev" aria-label="Previous remodeling category">←</button>
+    <button type="button" class="svc-btn" id="svcNext" aria-label="Next remodeling category">→</button>
+   </div>
+  </div>
+  <div class="htrack-scroll" id="htrackScroll">
+   <div class="htrack" id="htrack">
+    <article class="card"><div class="ph"><span class="num">01 · Kitchens</span><img src="img/kitchen-after.webp" alt="Concept rendering: luxury remodeled kitchen"></div><h3 class="serif">Kitchen Remodeling</h3><p>Transform your kitchen into a stunning space for unforgettable moments and family gatherings. Open floor plans, new plumbing and electrical, and walls moved where you need them.</p><a class="more" href="#quote" data-pick="Kitchen">Plan my kitchen →</a></article>
+    <article class="card"><div class="ph"><span class="num">02 · Bathrooms</span><img src="img/bath-luxe.webp" alt="Concept rendering: spa-like primary bathroom"></div><h3 class="serif">Bathroom Remodeling</h3><p>Design a luxurious bathroom with a relaxing, spa-like atmosphere: custom showers, soaking tubs, double vanities and heated floors.</p><a class="more" href="#quote" data-pick="Bathroom">Plan my bathroom →</a></article>
+    <article class="card"><div class="ph"><span class="num">03 · Additions &amp; ADUs</span><img src="img/addition.webp" alt="Concept rendering: home addition"></div><h3 class="serif">Home Additions &amp; ADUs</h3><p>Expand your living space for your family's evolving needs, from a home office or kids' rooms to a full accessory dwelling unit.</p><a class="more" href="#quote" data-pick="Addition / ADU">Plan my addition →</a></article>
+    <article class="card"><div class="ph"><span class="num">04 · Whole Home</span><img src="img/wholehome-after.webp" alt="Concept rendering: open-plan living room and kitchen"></div><h3 class="serif">Whole Home Remodeling</h3><p>Expert whole home remodeling that transforms your living space beautifully, with one team coordinating every room.</p><a class="more" href="#quote" data-pick="Whole home">Plan my remodel →</a></article>
+    <article class="card cta-card"><span class="eyebrow">Not sure where to start?</span><div><h3 class="serif">Tell us the idea. We'll shape the plan.</h3><p>Send a few photos and a short description, and we'll follow up with a phone consultation.</p></div><a class="btn btn-brass" href="#quote" style="align-self:flex-start">Get a Quote <span class="ar">→</span></a></article>
+   </div>
+  </div>
+ </div>
+ <p class="cap wrap svc-note">Concept renderings for design preview. The live site will use First Class Construction's own project photos.</p>
+</section>
+
+<section class="ba" id="work"><div class="wrap">
+ <div class="ba-head">
+  <div>
+   <span class="eyebrow rv">The transformation</span>
+   <h2 class="serif rv">Before &amp; after, side by side.</h2>
+  </div>
+  <div>
+   <p class="rv">Compare the original room layout, lighting, and finishes with the completed remodel—so you can see the difference craftsmanship makes from structure to finish.</p>
+  </div>
+ </div>
+ <div class="ba-toolbar rv">
+  <div class="tabsba" role="group" aria-label="Choose room transformation">
+   <button type="button" aria-pressed="true" data-room="kitchen" data-b="img/kitchen-before.webp" data-a="img/kitchen-after.webp">Kitchen Remodel</button>
+   <button type="button" aria-pressed="false" data-room="bath" data-b="img/bath-before.webp" data-a="img/bath-after.webp">Primary Bathroom</button>
+  </div>
+  <div class="presetsba" role="group" aria-label="Comparison view">
+   <button type="button" aria-pressed="false" data-pos="100">Before</button>
+   <button type="button" aria-pressed="true" data-pos="50">50 / 50 Split</button>
+   <button type="button" aria-pressed="false" data-pos="0">After</button>
+  </div>
+ </div>
+ <div class="slider rv" id="slider">
+  <img id="sb" src="img/kitchen-before.webp" alt="Concept rendering: dated kitchen before remodeling">
+  <img id="sa" class="after" src="img/kitchen-after.webp" alt="Concept rendering: remodeled luxury kitchen after completion">
+  <div class="handle" id="handle" aria-hidden="true"></div>
+  <div class="knob" id="knob" aria-hidden="true">DRAG</div>
+  <span class="tag b" id="tagB">Before</span>
+  <span class="tag a" id="tagA">After</span>
+  <input type="range" id="baRange" class="ba-range" min="0" max="100" value="50" aria-label="Before and after comparison position" aria-valuetext="50 percent split">
+ </div>
+ <div class="ba-details rv" id="baDetails" aria-live="polite">
+  <div class="ba-point"><small>Cabinetry &amp; Millwork</small><span>Full-height custom cabinetry &amp; sculpted range hood</span></div>
+  <div class="ba-point"><small>Layout &amp; Surfaces</small><span>Enlarged casement window, marble island &amp; white oak flooring</span></div>
+  <div class="ba-point"><small>Fixtures &amp; Lighting</small><span>Warm brass pendants, pot filler &amp; under-cabinet task lighting</span></div>
+ </div>
+ <p class="cap" style="margin-top:16px">Concept renderings for design preview. To be replaced with FCC's real before-and-after project photos and scope notes.</p>
+</div></section>
+
+<section class="show"><div class="wrap">
+ <div class="show-grid">
+  <figure class="tile t1 rv"><img class="par" src="img/wholehome-after.webp" alt="Concept rendering: whole home remodel" loading="lazy"><figcaption>Whole home · concept</figcaption></figure>
+  <figure class="tile t2 rv"><img class="par" src="img/bath-luxe.webp" alt="Concept rendering: primary bath" loading="lazy"><figcaption>Primary bath · concept</figcaption></figure>
+  <figure class="tile t3 rv"><img class="par" src="img/bath-after.webp" alt="Concept rendering: bathroom" loading="lazy"><figcaption>Bathroom · concept</figcaption></figure>
+  <figure class="tile t4 rv"><img class="par" src="img/addition.webp" alt="Concept rendering: addition" loading="lazy"><figcaption>Addition · concept</figcaption></figure>
+ </div>
+ <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:6vh"><p class="cap">Concept renderings. Gallery will feature FCC's completed projects. <span class="need">[NEED: 12–20 real project photos]</span></p><a class="btn btn-ghost" href="#quote">Find more inspiration <span class="ar">→</span></a></div>
+</div></section>
+
+<section class="owner" id="about"><div class="wrap grid">
+ <figure class="ownimg rv"><div class="oi"><img class="par" src="img/owner-concept.webp" alt="Concept rendering: a contractor reviewing blueprints in a finished luxury kitchen" loading="lazy"></div><figcaption class="cap">Concept rendering. Client photography to replace.</figcaption></figure>
+ <div>
+  <span class="eyebrow rv">About Us</span>
+  <h2 class="serif rv">A builder since 19. Owner-led since 2003.</h2>
+  <p class="rv">Matt Urbas discovered his passion for building at age 19, the first time he stepped onto a construction jobsite. After years of honing his skills, he opened First Class Construction in 2003 and has been dedicated to quality craftsmanship ever since.</p>
+  <p class="rv">He's known for building lasting relationships with his customers and takes pride in creating a positive experience on every project. Off the clock, you'll find him with his wife Natalie and their two daughters, or fishing and golfing.</p>
+  <div class="sig rv">Matt Urbas, Owner</div>
+ </div>
+</div></section>
+
+<section class="proc" id="process"><div class="wrap">
+ <div class="proc-head">
+  <div>
+   <span class="eyebrow rv">How it works</span>
+   <h2 class="serif rv">Three steps. Total peace of mind.</h2>
+  </div>
+  <p class="proc-note rv">A clear, owner-led process from your first call through the final walkthrough—so you always know what comes next.</p>
+ </div>
+ <div class="steps" id="steps">
+  <div class="prog" aria-hidden="true"><i id="progi"></i></div>
+  <div class="step rv"><span class="step-dot" aria-hidden="true"></span><div class="step-top"><div class="k serif">01</div><span class="step-tag">Step 1 of 3</span></div><h3 class="serif">Contact us</h3><p>Call, text or use the form to share your ideas, with a few photos if you have them. We'll follow up with a phone consultation.</p></div>
+  <div class="step rv"><span class="step-dot" aria-hidden="true"></span><div class="step-top"><div class="k serif">02</div><span class="step-tag">Step 2 of 3</span></div><h3 class="serif">We get to work</h3><p>We visit your home, take measurements, and go over budget, timeline and design choices. Once everything's final, we build.</p></div>
+  <div class="step rv"><span class="step-dot" aria-hidden="true"></span><div class="step-top"><div class="k serif">03</div><span class="step-tag">Step 3 of 3</span></div><h3 class="serif">Enjoy your home</h3><p>Your home is transformed into the space you've always envisioned. Celebrate it with family and friends.</p></div>
+ </div>
+</div></section>
+
+<section class="partner" id="partnership"><div class="wrap">
+ <div class="partner-box rv">
+  <div>
+   <span class="eyebrow">Built together</span>
+   <h2 class="serif">Partner with us to create a project that works for your home and your budget.</h2>
+   <div class="partner-slot">
+    <span class="need">[PLACEHOLDER: Final partnership wording to be provided by James]</span>
+    <p>Reserved for James's personal note on inviting homeowners into design, scope, and budget planning throughout the project development process.</p>
+   </div>
+   <a class="btn btn-brass" href="#quote">Start planning together <span class="ar">→</span></a>
+  </div>
+  <div class="partner-pillars">
+   <div class="pillar"><b>01</b><div><h3>Your Voice in Every Detail</h3><p>Collaborative decision-making on layout, finishes, and priorities from the earliest plans.</p></div></div>
+   <div class="pillar"><b>02</b><div><h3>Tailored to Your Home</h3><p>Practical building solutions shaped around how your family actually uses each room.</p></div></div>
+   <div class="pillar"><b>03</b><div><h3>Aligned With Your Budget</h3><p>Thoughtful planning that helps balance craftsmanship, scope, and investment before construction begins.</p></div></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="rev"><div class="wrap">
+ <span class="eyebrow rv">What our customers are saying</span>
+ <h2 class="serif rv">Relationships built to last, like the work.</h2>
+ <div class="quotes">
+  <figure class="q rv"><blockquote>“Working with First Class Construction takes the stress out of remodeling. Impeccable workmanship. We are delighted with our remodeled master bath and bedroom.”</blockquote><figcaption><cite>Diane Vazach</cite><div class="src">As published on fccoh.com</div></figcaption></figure>
+  <figure class="q rv"><blockquote>“100% satisfaction on our master bed/bath reconstruction! Such a great team of hard working, conscientious people!”</blockquote><figcaption><cite>Karen Whalen-Cassano</cite><div class="src">As published on fccoh.com</div></figcaption></figure>
+  <figure class="q rv"><blockquote>“We love the work that Matt and the crew did on our house. What a great experience and job they did.”</blockquote><figcaption><cite>Sally Dessecker</cite><div class="src">As published on fccoh.com</div></figcaption></figure>
+ </div>
+ <p class="cap" style="margin-top:22px"><span class="need">[NEED: link to Google reviews profile]</span></p>
+</div></section>
+
+<section class="cta" id="quote"><div class="wrap grid">
+ <div>
+  <span class="eyebrow rv">Get a quote</span>
+  <h2 class="serif rv">Let's build your <em>dream space.</em></h2>
+  <p class="lead rv">Answer three quick questions and we'll reach out to schedule your consultation. Prefer a direct conversation? Start a chat or call Matt's team.</p>
+  <div class="cta-actions rv">
+   <button type="button" class="btn btn-brass" id="startProjectBtn">Start your project <span class="ar">→</span></button>
+   <button type="button" class="btn btn-chat" id="openChatBtn">
+    <span class="chat-ico" aria-hidden="true">
+     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </span>
+    <span>Chat with us directly</span>
+   </button>
+   <a class="btn btn-ghost" href="tel:4403910060">Call or text 440-391-0060 <span class="ar">→</span></a>
+  </div>
+  <div class="chat-hint rv"><span class="need">[PLACEHOLDER: Direct chat / verified WhatsApp link to be connected]</span></div>
+ </div>
+ <div class="est rv" id="est">
+  <div class="bar"><i id="estbar"></i></div>
+  <div class="stage on" data-s="1"><h3 class="serif">What are you planning?</h3><div class="opts"><button type="button" class="opt" aria-pressed="false" data-val="Kitchen">Kitchen<small>Remodel or expand</small></button><button type="button" class="opt" aria-pressed="false" data-val="Bathroom">Bathroom<small>Spa-like upgrade</small></button><button type="button" class="opt" aria-pressed="false" data-val="Addition / ADU">Addition / ADU<small>More space</small></button><button type="button" class="opt" aria-pressed="false" data-val="Whole home">Whole home<small>Top to bottom</small></button></div></div>
+  <div class="stage" data-s="2"><h3 class="serif">When would you like to start?</h3><div class="opts"><button type="button" class="opt" aria-pressed="false" data-val="As soon as possible">As soon as possible</button><button type="button" class="opt" aria-pressed="false" data-val="In 1–3 months">In 1–3 months</button><button type="button" class="opt" aria-pressed="false" data-val="In 3–6 months">In 3–6 months</button><button type="button" class="opt" aria-pressed="false" data-val="Just exploring">Just exploring</button></div></div>
+  <div class="stage" data-s="3">
+   <h3 class="serif">Where should we reach you?</h3>
+   <div class="est-field"><label for="est-name">Your name</label><input id="est-name" name="name" autocomplete="name" placeholder="Full name"></div>
+   <div class="est-field"><label for="est-contact">Phone or email</label><input id="est-contact" name="contact" autocomplete="tel" placeholder="(440) 000-0000 or email"></div>
+   <div class="est-field"><label for="est-city">City / town</label><input id="est-city" name="city" autocomplete="address-level2" placeholder="Your city or town"></div>
+   <p class="cap">Mockup preview only: this form does not transmit data.</p>
+   <div class="est-status" id="estStatus" role="status" aria-live="polite"></div>
+  </div>
+  <div class="nav2"><button type="button" class="back" id="back">← Back</button><button type="button" class="next" id="next">Continue</button></div>
+ </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap grid">
+ <div>
+  <span class="eyebrow rv">FAQ</span>
+  <h2 class="serif rv">Good questions, straight answers.</h2>
+  <div class="areas rv" id="service-areas">
+   <span class="eyebrow">Where we work</span>
+   <h3 class="serif">Service Areas</h3>
+   <p>Proudly serving families in Lake County, Ohio and Northeast Ohio.</p>
+   <div class="chips" aria-label="Service areas">
+    <span>Lake County, Ohio</span>
+    <span>Northeast Ohio</span>
+    <span class="need-chip">[NEED: updated cities, towns &amp; service radius]</span>
+   </div>
+  </div>
+ </div>
+ <div>
+  <details class="rv"><summary>Who are the contractors at First Class Construction, Inc.?</summary><p>A skilled team of remodelers and contractors with over 20 years of experience, proudly serving families in Lake County, Ohio and nearby areas.</p></details>
+  <details class="rv"><summary>What does a luxury bathroom remodel include?</summary><p>Premium finishes, fixtures and custom features such as double sinks, a custom shower, a tub and heated floors. Cost depends on size, materials and design; you'll receive an accurate quote after the in-home consultation.</p></details>
+  <details class="rv"><summary>What does a high-end home addition include?</summary><p>Often structural changes, kitchen upgrades and bathroom remodels, and it may include expanding a basement or garage. Excavation may be required depending on scope.</p></details>
+  <details class="rv"><summary>What does it cost to build an ADU?</summary><p>It depends on size, materials and finishes. FCC offers three ADU construction tiers. Schedule an in-home consultation for a precise quote.</p></details>
+ </div>
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><a class="logo" href="#top"><span class="mark">FC</span><span><b>First Class Construction, Inc.</b><small>Luxury remodeling</small></span></a><p style="margin-top:18px;max-width:34ch">Lake County &amp; Northeast Ohio. <span class="need">[NEED: logo file, address, license info]</span></p></div>
+  <div><h4>Services</h4><a href="#services">Kitchens</a><a href="#services">Bathrooms</a><a href="#services">Additions &amp; ADUs</a><a href="#services">Whole home</a></div>
+  <div><h4>Company</h4><a href="#about">About Us</a><a href="#process">Process</a><a href="#partnership">Partnership</a><a href="#work">Our work</a><a href="#faq">FAQ</a></div>
+  <div><h4>Contact</h4><a href="tel:4403910060">440-391-0060</a><a href="#quote">Get a quote</a><button type="button" class="link-btn" id="footerChatBtn">Direct chat (placeholder)</button><span class="need">[NEED: email, hours, WhatsApp link]</span></div>
+ </div>
+ <div class="fbig" aria-hidden="true">First Class.</div>
+ <div class="legal"><span>© First Class Construction, Inc.</span><span>Design concept v2 R2 · imagery is AI concept rendering</span></div>
+</div></footer>
+
+<div class="mbar" id="mbar">
+ <a class="c" href="tel:4403910060">Call / text</a>
+ <button type="button" class="ch" id="mbarChatBtn">Direct chat</button>
+ <a class="q2" href="#quote">Get a quote</a>
+</div>
+
+<dialog class="chat-modal" id="chatDialog" aria-labelledby="chatDialogTitle">
+ <div class="chat-modal-head">
+  <div>
+   <span class="eyebrow">Direct conversation</span>
+   <h3 class="serif" id="chatDialogTitle">Chat with First Class Construction</h3>
+  </div>
+  <button type="button" class="chat-modal-close" id="closeChatBtn" aria-label="Close chat window">×</button>
+ </div>
+ <p>Have a quick question about a kitchen, bath, addition, or timeline? Connect directly once the live chat or verified WhatsApp channel is linked.</p>
+ <div class="chat-modal-box">
+  <span class="need">[PLACEHOLDER: Verified WhatsApp URL or live chat widget to be supplied by client]</span>
+  <p style="margin:10px 0 0;font-size:.86rem;color:#d6cfc2">No unverified WhatsApp number has been added. In the meantime, you can reach the team directly by phone or text, or start your project estimate.</p>
+ </div>
+ <div class="chat-modal-actions">
+  <a class="btn btn-brass" href="tel:4403910060">Call or text 440-391-0060 <span class="ar">→</span></a>
+  <button type="button" class="btn btn-ghost" id="chatToQuoteBtn">Request a quote</button>
+ </div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+const q=s=>document.querySelector(s),qa=s=>[...document.querySelectorAll(s)];
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const STATIC=/static/.test(location.search);
+let lenis=null,svcTrigger=null;
+
+function scrollToTarget(el,offset=-60){
+ if(!el)return;
+ if(lenis){lenis.scrollTo(el,{offset})}
+ else{el.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})}
+}
+
+// Nav & mobile menu drawer
+const nav=q('#nav'),burger=q('#burger'),mmenu=q('#mmenu'),mclose=q('#mclose');
+let ly=0,lastFocus=null;
+addEventListener('scroll',()=>{
+ const y=scrollY;
+ nav.classList.toggle('solid',y>60);
+ nav.classList.toggle('hide',y>ly&&y>500&&!mmenu.classList.contains('open'));
+ ly=y;
+ q('#mbar').classList.toggle('on',y>innerHeight*.65);
+},{passive:true});
+
+function toggleMenu(open){
+ const isOpen=typeof open==='boolean'?open:!mmenu.classList.contains('open');
+ if(isOpen){
+  lastFocus=document.activeElement;
+  mmenu.hidden=false;
+  requestAnimationFrame(()=>mmenu.classList.add('open'));
+  burger.setAttribute('aria-expanded','true');
+  mclose.focus();
+ }else{
+  mmenu.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  setTimeout(()=>{if(!mmenu.classList.contains('open'))mmenu.hidden=true},RM?0:450);
+  if(lastFocus&&typeof lastFocus.focus==='function')lastFocus.focus();
+ }
+}
+burger.addEventListener('click',()=>toggleMenu());
+mclose.addEventListener('click',()=>toggleMenu(false));
+qa('#mmenu a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mmenu.classList.contains('open'))toggleMenu(false)});
+
+// Before / After transformation slider + quick presets + accessible range input
+const ROOMS={
+ kitchen:{
+  b:'img/kitchen-before.webp',
+  a:'img/kitchen-after.webp',
+  bAlt:'Concept rendering: dated kitchen before remodeling',
+  aAlt:'Concept rendering: remodeled luxury kitchen after completion',
+  points:[
+   ['Cabinetry & Millwork','Full-height custom cabinetry & sculpted range hood'],
+   ['Layout & Surfaces','Enlarged casement window, marble island & white oak flooring'],
+   ['Fixtures & Lighting','Warm brass pendants, pot filler & under-cabinet task lighting']
+  ]
+ },
+ bath:{
+  b:'img/bath-before.webp',
+  a:'img/bath-after.webp',
+  bAlt:'Concept rendering: dated pink-tile bathroom before remodeling',
+  aAlt:'Concept rendering: spa-like primary bathroom after remodeling',
+  points:[
+   ['Shower Transformation','Curbless walk-in glass shower replacing framed tub enclosure'],
+   ['Vanity & Stonework','Floating walnut double vanity with wall-mounted brass fixtures'],
+   ['Tub & Flooring','Freestanding soaking tub paired with large-format stone tile']
+  ]
+ }
+};
+const sl=q('#slider'),sa=q('#sa'),sb=q('#sb'),h=q('#handle'),k=q('#knob'),baRange=q('#baRange');
+const tagB=q('#tagB'),tagA=q('#tagA'),baDetails=q('#baDetails');
+const presetBtns=qa('.presetsba button');
+
+function syncPresetState(p){
+ const rounded=Math.round(p);
+ presetBtns.forEach(btn=>{
+  const target=+btn.dataset.pos;
+  btn.setAttribute('aria-pressed',String(Math.abs(rounded-target)<=3));
+ });
+}
+function setP(p){
+ p=Math.max(0,Math.min(100,p));
+ sa.style.clipPath=`inset(0 0 0 ${p}%)`;
+ h.style.left=p+'%';
+ k.style.left=p+'%';
+ baRange.value=Math.round(p);
+ baRange.setAttribute('aria-valuetext',Math.round(p)+' percent split between Before and After');
+ tagB.style.opacity=p<10?'.38':'1';
+ tagA.style.opacity=p>90?'.38':'1';
+ syncPresetState(p);
+}
+baRange.addEventListener('input',()=>setP(+baRange.value));
+baRange.addEventListener('focus',()=>sl.classList.add('is-focused'));
+baRange.addEventListener('blur',()=>sl.classList.remove('is-focused'));
+
+let drag=false;
+const mv=e=>{
+ const r=sl.getBoundingClientRect();
+ const clientX=e.touches?e.touches[0].clientX:e.clientX;
+ setP((clientX-r.left)/r.width*100);
+};
+sl.addEventListener('pointerdown',e=>{drag=true;mv(e);sl.setPointerCapture(e.pointerId)});
+sl.addEventListener('pointermove',e=>{if(drag)mv(e)});
+sl.addEventListener('pointerup',()=>drag=false);
+sl.addEventListener('pointercancel',()=>drag=false);
+
+presetBtns.forEach(btn=>btn.addEventListener('click',()=>setP(+btn.dataset.pos)));
+qa('.tabsba button').forEach(b=>b.addEventListener('click',()=>{
+ qa('.tabsba button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+ const room=ROOMS[b.dataset.room]||ROOMS.kitchen;
+ sb.src=room.b;sb.alt=room.bAlt;
+ sa.src=room.a;sa.alt=room.aAlt;
+ baDetails.innerHTML=room.points.map(([t,d])=>`<div class="ba-point"><small>${t}</small><span>${d}</span></div>`).join('');
+ setP(50);
+}));
+
+// Remodeling Types horizontal scroll controls & live indicator
+const hwrap=q('#hwrap'),htrackScroll=q('#htrackScroll'),htrack=q('#htrack'),svcCards=qa('#htrack .card');
+const svcPrev=q('#svcPrev'),svcNext=q('#svcNext'),svcCount=q('#svcCount'),svcRail=q('#svcRail');
+let currentSvcIdx=0;
+
+function updateSvcIndicator(ratio){
+ const total=svcCards.length;
+ const clamped=Math.max(0,Math.min(1,ratio));
+ const idx=Math.min(total-1,Math.round(clamped*(total-1)));
+ currentSvcIdx=idx;
+ svcCount.textContent=String(idx+1).padStart(2,'0')+' / '+String(total).padStart(2,'0');
+ svcRail.style.width=((idx+1)/total*100)+'%';
+ svcPrev.disabled=idx<=0;
+ svcNext.disabled=idx>=total-1;
+}
+
+function goToSvcCard(idx){
+ const total=svcCards.length;
+ const targetIdx=Math.max(0,Math.min(total-1,idx));
+ if(svcTrigger&&innerWidth>=901){
+  const frac=targetIdx/(total-1);
+  const targetY=svcTrigger.start+(svcTrigger.end-svcTrigger.start)*frac;
+  if(lenis){lenis.scrollTo(targetY)}else{scrollTo({top:targetY,behavior:RM?'auto':'smooth'})}
+ }else{
+  const card=svcCards[targetIdx];
+  if(card){
+   const padLeft=parseFloat(getComputedStyle(htrack).paddingLeft)||0;
+   htrackScroll.scrollTo({left:Math.max(0,card.offsetLeft-padLeft),behavior:RM?'auto':'smooth'});
+  }
+ }
+}
+svcPrev.addEventListener('click',()=>goToSvcCard(currentSvcIdx-1));
+svcNext.addEventListener('click',()=>goToSvcCard(currentSvcIdx+1));
+svcCards.forEach((card,idx)=>card.addEventListener('focusin',()=>goToSvcCard(idx)));
+htrackScroll.addEventListener('scroll',()=>{
+ if(hwrap.classList.contains('is-scrollable')){
+  const max=htrackScroll.scrollWidth-htrackScroll.clientWidth;
+  if(max>0)updateSvcIndicator(htrackScroll.scrollLeft/max);
+ }
+},{passive:true});
+updateSvcIndicator(0);
+
+// Project Estimator & Service card -> Quote pre-selection
+let st=1,selectedPlan='',selectedTime='';
+const estStatus=q('#estStatus');
+const stg=()=>{
+ qa('.stage').forEach(s=>s.classList.toggle('on',+s.dataset.s===st));
+ q('#estbar').style.width=(st/3*100)+'%';
+ q('#next').textContent=st===3?'Request consultation':'Continue';
+ q('#back').style.visibility=st===1?'hidden':'visible';
+ if(st!==3)estStatus.classList.remove('show');
+};
+qa('.stage[data-s="1"] .opt').forEach(o=>o.addEventListener('click',()=>{
+ qa('.stage[data-s="1"] .opt').forEach(x=>x.setAttribute('aria-pressed',String(x===o)));
+ selectedPlan=o.dataset.val||o.textContent.trim();
+ setTimeout(()=>{if(st===1){st=2;stg()}},260);
+}));
+qa('.stage[data-s="2"] .opt').forEach(o=>o.addEventListener('click',()=>{
+ qa('.stage[data-s="2"] .opt').forEach(x=>x.setAttribute('aria-pressed',String(x===o)));
+ selectedTime=o.dataset.val||o.textContent.trim();
+ setTimeout(()=>{if(st===2){st=3;stg()}},260);
+}));
+q('#next').addEventListener('click',()=>{
+ if(st<3){st++;stg()}
+ else{
+  const nm=q('#est-name').value.trim();
+  const ct=q('#est-contact').value.trim();
+  const summary=[selectedPlan||'Remodel project',selectedTime||'Flexible timeline'].join(' · ');
+  estStatus.textContent=nm||ct
+   ?`Preview confirmed for ${nm||'your project'} (${summary}). No data was transmitted in this design preview.`
+   :`Preview ready (${summary}). Enter your contact details when live, or call 440-391-0060.`;
+  estStatus.classList.add('show');
+  q('#next').textContent='Preview saved ✓';
+ }
+});
+q('#back').addEventListener('click',()=>{if(st>1){st--;stg()}});
+stg();
+
+qa('[data-pick]').forEach(link=>link.addEventListener('click',e=>{
+ e.preventDefault();
+ const val=link.dataset.pick;
+ qa('.stage[data-s="1"] .opt').forEach(o=>{
+  const match=o.dataset.val===val;
+  o.setAttribute('aria-pressed',String(match));
+  if(match)selectedPlan=val;
+ });
+ st=2;stg();
+ scrollToTarget(q('#quote'),-40);
+}));
+
+q('#startProjectBtn').addEventListener('click',()=>{
+ st=1;stg();
+ scrollToTarget(q('#est'),-90);
+ const firstOpt=q('.stage[data-s="1"] .opt');
+ if(firstOpt)setTimeout(()=>firstOpt.focus({preventScroll:true}),350);
+});
+
+// Direct Chat modal (native <dialog> placeholder without inventing a phone/WhatsApp number)
+const chatDialog=q('#chatDialog');
+function openChat(){
+ if(typeof chatDialog.showModal==='function'){chatDialog.showModal()}
+ else{chatDialog.setAttribute('open','')}
+}
+function closeChat(){
+ if(typeof chatDialog.close==='function'&&chatDialog.open){chatDialog.close()}
+ else{chatDialog.removeAttribute('open')}
+}
+[q('#openChatBtn'),q('#footerChatBtn'),q('#mbarChatBtn')].forEach(b=>b&&b.addEventListener('click',openChat));
+q('#closeChatBtn').addEventListener('click',closeChat);
+chatDialog.addEventListener('click',e=>{if(e.target===chatDialog)closeChat()});
+q('#chatToQuoteBtn').addEventListener('click',()=>{closeChat();scrollToTarget(q('#est'),-90)});
+
+// Word split for Intro big text
+const bt=q('#bigtext');
+bt.innerHTML=bt.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
+
+// Progressive enhancement: only apply initial hidden states if GSAP + motion are active
+if(RM||STATIC||!window.gsap){
+ document.documentElement.classList.add('noanim');
+ hwrap.classList.add('is-scrollable');
+ qa('#bigtext .w').forEach(w=>w.style.opacity=1);
+ qa('[data-count]').forEach(n=>n.textContent=n.dataset.count);
+ return;
+}
+
+document.documentElement.classList.add('js-anim');
+gsap.registerPlugin(ScrollTrigger);
+if(window.Lenis){
+ lenis=new Lenis({lerp:.09});
+ lenis.on('scroll',ScrollTrigger.update);
+ gsap.ticker.add(t=>lenis.raf(t*1000));
+ gsap.ticker.lagSmoothing(0);
+}
+qa('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+ const href=a.getAttribute('href');
+ if(!href||href==='#'||a.hasAttribute('data-pick'))return;
+ const t=q(href);
+ if(t){e.preventDefault();scrollToTarget(t,-60)}
+}));
+
+// Hero intro
+const tl=gsap.timeline({defaults:{ease:'expo.out'}});
+tl.to('.hero .bg',{clipPath:'inset(0% 0% 0% 0% round 0px)',duration:1.7,ease:'expo.inOut'})
+  .to('.hero .bg img',{scale:1,duration:2.1},'<')
+  .to('.line>span',{y:0,duration:1.25,stagger:.12},'-=1.05')
+  .to('.hero .fade',{opacity:1,y:0,duration:1},'-=.85');
+gsap.to('.hero .bg img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+gsap.to('.hero .content',{y:-70,opacity:.22,ease:'none',scrollTrigger:{trigger:'.hero',start:'center center',end:'bottom top',scrub:true}});
+
+// Reveals & big text
+qa('.rv').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
+gsap.to('#bigtext .w',{opacity:1,stagger:.05,ease:'none',scrollTrigger:{trigger:'#bigtext',start:'top 80%',end:'bottom 45%',scrub:true}});
+qa('[data-count]').forEach(n=>{
+ const o={v:0};
+ gsap.to(o,{v:+n.dataset.count,duration:1.6,ease:'power2.out',scrollTrigger:{trigger:n,start:'top 90%'},onUpdate:()=>n.textContent=Math.round(o.v)});
+});
+
+// Horizontal remodeling services (desktop pinned scroll + native touch swipe on <=900px)
+ScrollTrigger.matchMedia({
+ '(min-width:901px)':()=>{
+  hwrap.classList.remove('is-scrollable');
+  const d=()=>Math.max(0,htrack.scrollWidth-innerWidth);
+  const anim=gsap.to(htrack,{
+   x:()=>-d(),
+   ease:'none',
+   scrollTrigger:{
+    trigger:'#hwrap',
+    start:'top 96px',
+    end:()=>'+='+d(),
+    pin:true,
+    scrub:1,
+    invalidateOnRefresh:true,
+    onUpdate:self=>updateSvcIndicator(self.progress)
+   }
+  });
+  svcTrigger=anim.scrollTrigger;
+  qa('.card .ph img').forEach(i=>gsap.fromTo(i,{xPercent:-5},{xPercent:5,ease:'none',scrollTrigger:{trigger:'#hwrap',start:'top 96px',end:()=>'+='+d(),scrub:true}}));
+  return ()=>{svcTrigger=null};
+ },
+ '(max-width:900px)':()=>{
+  svcTrigger=null;
+  gsap.set(htrack,{clearProps:'transform'});
+  hwrap.classList.add('is-scrollable');
+  updateSvcIndicator(0);
+ }
+});
+
+// Slider gentle auto-reveal on enter
+ScrollTrigger.create({trigger:'#slider',start:'top 72%',once:true,onEnter:()=>{const o={p:82};gsap.to(o,{p:50,duration:1.5,ease:'expo.inOut',onUpdate:()=>setP(o.p),onStart:()=>setP(82)})}});
+
+// Showcase parallax
+qa('.tile .par,.ownimg .par').forEach(i=>{
+ gsap.set(i,{scale:1.18});
+ gsap.fromTo(i,{yPercent:-7},{yPercent:7,ease:'none',scrollTrigger:{trigger:i.parentNode,start:'top bottom',end:'bottom top',scrub:true}});
+});
+qa('.tile').forEach(t=>gsap.fromTo(t,{clipPath:'inset(16% 0% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'expo.out',duration:1.3,scrollTrigger:{trigger:t,start:'top 85%'}}));
+
+// Process rail (horizontal on desktop, vertical on mobile)
+ScrollTrigger.matchMedia({
+ '(min-width:901px)':()=>{
+  gsap.set('#progi',{scaleX:0,scaleY:1});
+  gsap.to('#progi',{scaleX:1,ease:'none',scrollTrigger:{trigger:'#steps',start:'top 75%',end:'bottom 58%',scrub:true}});
+ },
+ '(max-width:900px)':()=>{
+  gsap.set('#progi',{scaleX:1,scaleY:0});
+  gsap.to('#progi',{scaleY:1,ease:'none',scrollTrigger:{trigger:'#steps',start:'top 75%',end:'bottom 58%',scrub:true}});
+ }
+});
+
+// Footer big
+gsap.fromTo('.fbig',{yPercent:36,opacity:0},{yPercent:0,opacity:1,ease:'expo.out',duration:1.3,scrollTrigger:{trigger:'.fbig',start:'top 95%'}});
+addEventListener('load',()=>ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
