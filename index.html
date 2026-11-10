@@ -80,10 +80,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px
 
 /* HERO */
 .hero{position:relative;height:100svh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end}
-.hero .bg{position:absolute;inset:0;will-change:clip-path}
-.js-anim .hero .bg{clip-path:inset(12% 18% 12% 18% round 6px)}
+.hero .bg{position:absolute;inset:0}
 .hero .bg img{width:100%;height:118%;object-fit:cover;will-change:transform}
-.js-anim .hero .bg img{transform:scale(1.15)}
 .hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,18,16,.58) 0%,rgba(18,18,16,.08) 35%,rgba(18,18,16,.24) 55%,rgba(18,18,16,.93) 100%),linear-gradient(90deg,rgba(18,18,16,.48),transparent 62%)}
 .hero .content{position:relative;z-index:2;width:min(1320px,90vw);margin:0 auto;padding-bottom:7.5vh;display:grid;grid-template-columns:1.55fr 1fr;gap:5vw;align-items:end}
 .hero h1{font-size:clamp(2.8rem,6.8vw,7rem)}
@@ -94,7 +92,6 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px
 .hero .side p{color:#ded7ca;max-width:40ch;margin-bottom:26px;font-size:1.02rem}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .js-anim .hero .fade{opacity:0;transform:translateY(20px)}
-.hero .cap{position:absolute;right:4vw;top:106px;z-index:2;color:rgba(243,238,229,.65)}
 .scrollcue{position:absolute;left:50%;bottom:20px;z-index:2;width:1px;height:44px;background:var(--line);overflow:hidden}
 .scrollcue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--brass2);animation:cue 2.2s var(--ease) infinite}
 @keyframes cue{to{top:110%}}
@@ -309,14 +306,12 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;back
 .js-anim .rv{opacity:0;transform:translateY(32px)}
 .noanim .rv,.noanim .hero .fade{opacity:1!important;transform:none!important}
 .noanim .line>span{transform:none!important}
-.noanim .hero .bg{clip-path:none!important}
 
 @media (max-width:900px){
  .links,.phone{display:none}.burger{display:grid;place-items:center}
  .navr .btn{display:none}
  .hero{min-height:660px}
  .hero .content{grid-template-columns:1fr;gap:22px;padding-bottom:11vh}
- .hero .cap{top:auto;bottom:68px;right:5vw}
  .intro .grid,.ba-head,.owner .grid,.partner-box,.cta .grid,.faq .grid{grid-template-columns:1fr;gap:34px}
  .intro .facts{grid-template-columns:repeat(3,1fr)}
  .fact .n{font-size:1.85rem}
@@ -379,7 +374,6 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;back
 <header class="hero" id="top">
  <div class="bg"><img src="img/hero-dusk.webp" alt="Concept rendering: a renovated Northeast Ohio home with a modern glass addition at dusk" fetchpriority="high"></div>
  <div class="shade"></div>
- <div class="cap">Concept rendering for design preview</div>
  <div class="content">
   <h1 class="serif"><span class="line"><span>Northeast Ohio's</span></span><span class="line"><span><em>luxury</em> remodeler,</span></span><span class="line"><span>owner-led since 2003.</span></span></h1>
   <div class="side fade">
@@ -897,12 +891,10 @@ qa('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
  if(t){e.preventDefault();scrollToTarget(t,-60)}
 }));
 
-// Hero intro
+// Hero intro (full-width image from load, no dark clip/inset or zoom-out jump)
 const tl=gsap.timeline({defaults:{ease:'expo.out'}});
-tl.to('.hero .bg',{clipPath:'inset(0% 0% 0% 0% round 0px)',duration:1.7,ease:'expo.inOut'})
-  .to('.hero .bg img',{scale:1,duration:2.1},'<')
-  .to('.line>span',{y:0,duration:1.25,stagger:.12},'-=1.05')
-  .to('.hero .fade',{opacity:1,y:0,duration:1},'-=.85');
+tl.to('.line>span',{y:0,duration:1.15,stagger:.12})
+  .to('.hero .fade',{opacity:1,y:0,duration:.95},'-=.8');
 gsap.to('.hero .bg img',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
 gsap.to('.hero .content',{y:-70,opacity:.22,ease:'none',scrollTrigger:{trigger:'.hero',start:'center center',end:'bottom top',scrub:true}});
 
