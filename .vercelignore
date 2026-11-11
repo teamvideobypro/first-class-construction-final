@@ -1,0 +1,7 @@
+.git
+.vercel
+.env*
+.DS_Store
+Thumbs.db
+new images/
+FIRST_CLASS_CONSTRUCTION_R2_AUDIT.md

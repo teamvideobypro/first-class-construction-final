@@ -58,15 +58,14 @@ p,blockquote{text-wrap:pretty}
 .cap{font-size:.74rem;color:var(--mute);letter-spacing:.03em}
 
 /* NAV */
-nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:22px 0;transition:background .5s,padding .5s,transform .5s var(--ease)}
-nav.solid{background:rgba(18,18,16,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:14px 0;border-bottom:1px solid var(--line)}
+nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:16px 0;transition:background .5s,padding .5s,transform .5s var(--ease)}
+nav.solid{background:rgba(18,18,16,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:10px 0;border-bottom:1px solid var(--line)}
 nav.hide{transform:translateY(-100%)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{display:flex;align-items:center;gap:12px}
-.mark{width:40px;height:40px;border:1px solid var(--brass);display:grid;place-items:center;font-family:Fraunces;color:var(--brass2);font-size:1rem;letter-spacing:.02em;flex-shrink:0}
-.logo b{font-family:Fraunces;font-weight:400;font-size:1.08rem;letter-spacing:.01em;display:block;line-height:1.1}
-.logo small{font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
-.links{display:flex;gap:32px;font-size:.88rem;color:#d6cfc2}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:inline-flex;align-items:center;flex-shrink:0}
+.brand-logo{display:block;height:52px;width:auto}
+.brand-logo-lg{height:76px;width:auto}
+.links{display:flex;gap:26px;font-size:.88rem;color:#d6cfc2}
 .links a{position:relative;padding:6px 0}
 .links a::after{content:"";position:absolute;left:0;bottom:2px;height:1px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
 .links a:hover::after,.links a:focus-visible::after{transform:scaleX(1);transform-origin:left}
@@ -131,13 +130,16 @@ section{position:relative}
 .htrack{display:flex;gap:clamp(20px,2.2vw,34px);padding:4px 5vw clamp(36px,5vh,56px);width:max-content}
 .card{width:clamp(310px,34vw,490px);flex:0 0 auto;position:relative;display:flex;flex-direction:column;scroll-snap-align:start;transition:transform .5s var(--ease)}
 .card:hover{transform:translateY(-4px)}
-.card .ph{width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:6px;position:relative;background:#e5dfd2}
+.card .ph{display:block;width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:6px;position:relative;background:#e5dfd2}
 .card .ph img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 1.1s var(--ease)}
 .card:hover .ph img{transform:scale(1)}
 .card .num{position:absolute;top:16px;left:16px;z-index:2;font-size:.72rem;letter-spacing:.18em;color:var(--bone);background:rgba(18,18,16,.66);backdrop-filter:blur(6px);padding:6px 12px;border-radius:99px}
 .card h3{font-size:clamp(1.65rem,2.3vw,2.35rem);margin:20px 0 8px}
+.card h3 a:hover{color:var(--brassD)}
 .card p{color:#504a40;max-width:44ch;font-size:.96rem}
-.card .more{margin-top:auto;padding-top:16px;align-self:flex-start;display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:.9rem;border-bottom:1px solid var(--ink);padding-bottom:3px;transition:color .3s,border-color .3s}
+.card-actions{margin-top:auto;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.card .more{display:inline-flex;align-items:center;gap:8px;font-weight:500;font-size:.9rem;border-bottom:1px solid var(--ink);padding-bottom:3px;transition:color .3s,border-color .3s}
+.card .more.more-sub{color:var(--muteD);border-color:rgba(18,18,16,.28);font-weight:400}
 .card .more:hover{color:var(--brassD);border-color:var(--brassD)}
 .card.cta-card{background:var(--ink);color:var(--bone);border-radius:6px;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:4/3;align-self:flex-start}
 .card.cta-card .eyebrow{color:var(--brass2)}
@@ -310,6 +312,8 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;back
 @media (max-width:900px){
  .links,.phone{display:none}.burger{display:grid;place-items:center}
  .navr .btn{display:none}
+ .brand-logo{height:44px}
+ .brand-logo-lg{height:64px}
  .hero{min-height:660px}
  .hero .content{grid-template-columns:1fr;gap:22px;padding-bottom:11vh}
  .intro .grid,.ba-head,.owner .grid,.partner-box,.cta .grid,.faq .grid{grid-template-columns:1fr;gap:34px}
@@ -354,8 +358,8 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;back
 <a class="skip-link visually-hidden" href="#main-content">Skip to main content</a>
 
 <nav id="nav" aria-label="Primary"><div class="wrap">
- <a class="logo" href="#top" aria-label="First Class Construction home"><span class="mark">FC</span><span><b>First Class Construction</b><small>Inc. · Est. 2003</small></span></a>
- <div class="links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Us</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
+ <a class="logo" href="#top" aria-label="First Class Construction home"><img class="brand-logo" src="img/first-class-construction-logo.svg" alt="First Class Construction — Custom Residential Remodeling" width="124" height="52"></a>
+ <div class="links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="gallery.html">Gallery</a><a href="#about">About Us</a><a href="#process">Process</a><a href="#faq">FAQ</a></div>
  <div class="navr"><a class="phone" href="tel:4403910060">Call or text <span>440-391-0060</span></a><a class="btn btn-brass" href="#quote">Get a Quote <span class="ar">→</span></a><button type="button" class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu">☰</button></div>
 </div></nav>
 
@@ -363,6 +367,7 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;back
  <button type="button" class="mmenu-close" id="mclose" aria-label="Close menu">×</button>
  <a href="#services">Services</a>
  <a href="#work">Our Work</a>
+ <a href="gallery.html">Gallery</a>
  <a href="#about">About Us</a>
  <a href="#process">Process</a>
  <a href="#partnership">Partnership</a>
@@ -422,15 +427,15 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;back
   </div>
   <div class="htrack-scroll" id="htrackScroll">
    <div class="htrack" id="htrack">
-    <article class="card"><div class="ph"><span class="num">01 · Kitchens</span><img src="img/kitchen-after.webp" alt="Concept rendering: luxury remodeled kitchen"></div><h3 class="serif">Kitchen Remodeling</h3><p>Transform your kitchen into a stunning space for unforgettable moments and family gatherings. Open floor plans, new plumbing and electrical, and walls moved where you need them.</p><a class="more" href="#quote" data-pick="Kitchen">Plan my kitchen →</a></article>
-    <article class="card"><div class="ph"><span class="num">02 · Bathrooms</span><img src="img/bath-luxe.webp" alt="Concept rendering: spa-like primary bathroom"></div><h3 class="serif">Bathroom Remodeling</h3><p>Design a luxurious bathroom with a relaxing, spa-like atmosphere: custom showers, soaking tubs, double vanities and heated floors.</p><a class="more" href="#quote" data-pick="Bathroom">Plan my bathroom →</a></article>
-    <article class="card"><div class="ph"><span class="num">03 · Additions &amp; ADUs</span><img src="img/addition.webp" alt="Concept rendering: home addition"></div><h3 class="serif">Home Additions &amp; ADUs</h3><p>Expand your living space for your family's evolving needs, from a home office or kids' rooms to a full accessory dwelling unit.</p><a class="more" href="#quote" data-pick="Addition / ADU">Plan my addition →</a></article>
-    <article class="card"><div class="ph"><span class="num">04 · Whole Home</span><img src="img/wholehome-after.webp" alt="Concept rendering: open-plan living room and kitchen"></div><h3 class="serif">Whole Home Remodeling</h3><p>Expert whole home remodeling that transforms your living space beautifully, with one team coordinating every room.</p><a class="more" href="#quote" data-pick="Whole home">Plan my remodel →</a></article>
+    <article class="card"><a class="ph" href="gallery.html?category=kitchen" aria-label="View Kitchen Remodeling gallery"><span class="num">01 · Kitchens</span><img src="img/projects/kitchen/blue-kitchen-island-wide.webp" alt="Completed custom kitchen remodel with navy blue center island and white perimeter cabinetry"></a><h3 class="serif"><a href="gallery.html?category=kitchen">Kitchen Remodeling</a></h3><p>Transform your kitchen into a stunning space for unforgettable moments and family gatherings. Open floor plans, new plumbing and electrical, and walls moved where you need them.</p><div class="card-actions"><a class="more" href="gallery.html?category=kitchen">View gallery (12) →</a><a class="more more-sub" href="#quote" data-pick="Kitchen">Plan my kitchen</a></div></article>
+    <article class="card"><a class="ph" href="gallery.html?category=bathroom" aria-label="View Bathroom Remodeling gallery"><span class="num">02 · Bathrooms</span><img src="img/projects/bathroom/sullivan-primary-tub.webp" alt="Completed luxury primary bathroom remodel with freestanding soaking tub and backlit dual mirrors"></a><h3 class="serif"><a href="gallery.html?category=bathroom">Bathroom Remodeling</a></h3><p>Design a luxurious bathroom with a relaxing, spa-like atmosphere: custom showers, soaking tubs, double vanities and heated floors.</p><div class="card-actions"><a class="more" href="gallery.html?category=bathroom">View gallery (10) →</a><a class="more more-sub" href="#quote" data-pick="Bathroom">Plan my bathroom</a></div></article>
+    <article class="card"><a class="ph" href="gallery.html?category=additions" aria-label="View Housing Additions gallery"><span class="num">03 · Additions &amp; ADUs</span><img src="img/projects/additions/ricaurte-twostory-addition.webp" alt="Completed two-story screened sunroom addition and stone retaining wall"></a><h3 class="serif"><a href="gallery.html?category=additions">Home Additions &amp; ADUs</a></h3><p>Expand your living space for your family's evolving needs, from a home office or kids' rooms to a full accessory dwelling unit.</p><div class="card-actions"><a class="more" href="gallery.html?category=additions">View gallery (11) →</a><a class="more more-sub" href="#quote" data-pick="Addition / ADU">Plan my addition</a></div></article>
+    <article class="card"><a class="ph" href="gallery.html?category=full-home" aria-label="View Full Home Remodeling gallery"><span class="num">04 · Whole Home</span><img src="img/projects/full-home/quail-coffered-lounge.webp" alt="Completed full lower-level living remodel with coffered wood-wrapped ceiling beams"></a><h3 class="serif"><a href="gallery.html?category=full-home">Whole Home Remodeling</a></h3><p>Expert whole home remodeling that transforms your living space beautifully, with one team coordinating every room.</p><div class="card-actions"><a class="more" href="gallery.html?category=full-home">View gallery (12) →</a><a class="more more-sub" href="#quote" data-pick="Whole home">Plan my remodel</a></div></article>
     <article class="card cta-card"><span class="eyebrow">Not sure where to start?</span><div><h3 class="serif">Tell us the idea. We'll shape the plan.</h3><p>Send a few photos and a short description, and we'll follow up with a phone consultation.</p></div><a class="btn btn-brass" href="#quote" style="align-self:flex-start">Get a Quote <span class="ar">→</span></a></article>
    </div>
   </div>
  </div>
- <p class="cap wrap svc-note">Concept renderings for design preview. The live site will use First Class Construction's own project photos.</p>
+ <p class="cap wrap svc-note">Completed First Class Construction remodeling projects across Northeast Ohio.</p>
 </section>
 
 <section class="ba" id="work"><div class="wrap">
@@ -468,17 +473,17 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;back
   <div class="ba-point"><small>Layout &amp; Surfaces</small><span>Enlarged casement window, marble island &amp; white oak flooring</span></div>
   <div class="ba-point"><small>Fixtures &amp; Lighting</small><span>Warm brass pendants, pot filler &amp; under-cabinet task lighting</span></div>
  </div>
- <p class="cap" style="margin-top:16px">Concept renderings for design preview. To be replaced with FCC's real before-and-after project photos and scope notes.</p>
+ <p class="cap" style="margin-top:16px">Interactive comparison uses concept renderings until matching client before-and-after project pairs are provided. Real completed projects are featured below and in the Gallery.</p>
 </div></section>
 
 <section class="show"><div class="wrap">
  <div class="show-grid">
-  <figure class="tile t1 rv"><img class="par" src="img/wholehome-after.webp" alt="Concept rendering: whole home remodel" loading="lazy"><figcaption>Whole home · concept</figcaption></figure>
-  <figure class="tile t2 rv"><img class="par" src="img/bath-luxe.webp" alt="Concept rendering: primary bath" loading="lazy"><figcaption>Primary bath · concept</figcaption></figure>
-  <figure class="tile t3 rv"><img class="par" src="img/bath-after.webp" alt="Concept rendering: bathroom" loading="lazy"><figcaption>Bathroom · concept</figcaption></figure>
-  <figure class="tile t4 rv"><img class="par" src="img/addition.webp" alt="Concept rendering: addition" loading="lazy"><figcaption>Addition · concept</figcaption></figure>
+  <figure class="tile t1 rv"><img class="par" src="img/projects/full-home/vaughn-open-living.webp" alt="Completed open-concept whole home kitchen and living room remodel" loading="lazy"><figcaption>Full home remodel</figcaption></figure>
+  <figure class="tile t2 rv"><img class="par" src="img/projects/bathroom/sullivan-bath-shower.webp" alt="Completed primary bath suite with freestanding soaking tub and glass walk-in shower" loading="lazy"><figcaption>Primary bath suite</figcaption></figure>
+  <figure class="tile t3 rv"><img class="par" src="img/projects/kitchen/sullivan-white-island.webp" alt="Completed custom white shaker island kitchen remodel" loading="lazy"><figcaption>Island kitchen</figcaption></figure>
+  <figure class="tile t4 rv"><img class="par" src="img/projects/additions/ricaurte-sunroom-lounge.webp" alt="Completed vaulted sunroom addition overlooking Lake Erie" loading="lazy"><figcaption>Sunroom addition</figcaption></figure>
  </div>
- <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:6vh"><p class="cap">Concept renderings. Gallery will feature FCC's completed projects. <span class="need">[NEED: 12–20 real project photos]</span></p><a class="btn btn-ghost" href="#quote">Find more inspiration <span class="ar">→</span></a></div>
+ <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:6vh"><p class="cap">Completed First Class Construction renovation projects.</p><a class="btn btn-ghost" href="gallery.html">Explore full gallery <span class="ar">→</span></a></div>
 </div></section>
 
 <section class="owner" id="about"><div class="wrap grid">
@@ -598,13 +603,13 @@ footer{border-top:1px solid var(--line);padding:clamp(56px,9vh,96px) 0 40px;back
 
 <footer><div class="wrap">
  <div class="fgrid">
-  <div><a class="logo" href="#top"><span class="mark">FC</span><span><b>First Class Construction, Inc.</b><small>Luxury remodeling</small></span></a><p style="margin-top:18px;max-width:34ch">Lake County &amp; Northeast Ohio. <span class="need">[NEED: logo file, address, license info]</span></p></div>
-  <div><h4>Services</h4><a href="#services">Kitchens</a><a href="#services">Bathrooms</a><a href="#services">Additions &amp; ADUs</a><a href="#services">Whole home</a></div>
-  <div><h4>Company</h4><a href="#about">About Us</a><a href="#process">Process</a><a href="#partnership">Partnership</a><a href="#work">Our work</a><a href="#faq">FAQ</a></div>
+  <div><a class="logo" href="#top" aria-label="First Class Construction home"><img class="brand-logo brand-logo-lg" src="img/first-class-construction-logo.svg" alt="First Class Construction — Custom Residential Remodeling" width="181" height="76"></a><p style="margin-top:18px;max-width:34ch">Lake County &amp; Northeast Ohio. <span class="need">[NEED: address, license info]</span></p></div>
+  <div><h4>Services</h4><a href="gallery.html?category=kitchen">Kitchens</a><a href="gallery.html?category=bathroom">Bathrooms</a><a href="gallery.html?category=additions">Housing Additions</a><a href="gallery.html?category=full-home">Full Home</a></div>
+  <div><h4>Company</h4><a href="gallery.html">Gallery</a><a href="#about">About Us</a><a href="#process">Process</a><a href="#partnership">Partnership</a><a href="#work">Our work</a><a href="#faq">FAQ</a></div>
   <div><h4>Contact</h4><a href="tel:4403910060">440-391-0060</a><a href="#quote">Get a quote</a><button type="button" class="link-btn" id="footerChatBtn">Direct chat (placeholder)</button><span class="need">[NEED: email, hours, WhatsApp link]</span></div>
  </div>
  <div class="fbig" aria-hidden="true">First Class.</div>
- <div class="legal"><span>© First Class Construction, Inc.</span><span>Design concept v2 R2 · imagery is AI concept rendering</span></div>
+ <div class="legal"><span>© First Class Construction, Inc.</span><span>Design concept v2 R2 · completed project photography by First Class Construction</span></div>
 </div></footer>
 
 <div class="mbar" id="mbar">
